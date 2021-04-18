@@ -20,11 +20,20 @@ img {
     color: #FFFFFF;
     width: 75%;
 }
+a:link {
+    color: #FFFFFF;
+}
+a:visited {
+    color: #996600;
+}
+a:hover {
+    color:#c69c6c;
+}
 #name {
     text-align: center;
     font-family: "Lato", sans-serif;
     color: #FFFFFF;
-    padding-bottom: 10px;
+    padding-bottom  : 10px;
 }
 .navbar {
     background-color: #303136;
