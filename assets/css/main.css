@@ -7,12 +7,26 @@ body {
 }
 img {
     width: 10%;
-    height: 10%
+    height: 10%;
+}
+.icon-bar {
+    position: fixed;
+    top: 95%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+.topClass {
+    width: 85%;
+    height: 85%;
 }
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+code {
+    background-color: #636469;
 }
 #maintext {
     margin:auto;
@@ -71,16 +85,15 @@ a:hover {
 }
 /* Popup container */
 .popup {
-    position: absolute;
+    position: relative;
     display: inline-block;
     cursor: pointer;
-    bottom: 8px;
   }
   
   /* The actual popup (appears on top) */
   .popup .popuptext {
     visibility: hidden;
-    width: 160px;
+    width: 350px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -89,7 +102,7 @@ a:hover {
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 50%;
+    left: 30%;
     margin-left: -80px;
   }
   
@@ -122,3 +135,69 @@ a:hover {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+  /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  input[type='checkbox'] { 
+      display: none; 
+    } 
+    .wrap-collabsible { 
+        margin: 1.2rem 0; 
+    } 
+    .lbl-toggle { 
+        display: block; 
+        font-family: "Lato", sans-serif; 
+        font-weight: bold;
+        font-size: 1.2rem; 
+        padding: 1rem; 
+        color: #c69c6c; 
+        background: #303136; 
+        cursor: pointer; 
+        border-radius: 7px; 
+        transition: all 0.25s ease-out; 
+    } .lbl-toggle:hover { 
+        color: #FFF; 
+    } 
+    .lbl-toggle::before { 
+        content: ' '; 
+        display: inline-block;
+        border-top: 5px solid transparent; 
+        border-bottom: 5px solid transparent; 
+        border-left: 5px solid currentColor; 
+        vertical-align: middle; 
+        margin-right: .7rem; 
+        transform: translateY(-2px); 
+        transition: transform .2s ease-out; 
+    } 
+    .toggle:checked+.lbl-toggle::before { 
+        transform: rotate(90deg) translateX(-3px); 
+    } 
+    .collapsible-content { 
+        max-height: 0px; 
+        overflow: hidden; 
+        transition: max-height .25s ease-in-out; 
+    } 
+    .toggle:checked + .lbl-toggle + .collapsible-content { 
+        max-height: 350px; 
+    } 
+    .toggle:checked+.lbl-toggle { 
+        border-bottom-right-radius: 0; 
+        border-bottom-left-radius: 0; 
+    } 
+    .collapsible-content .content-inner { 
+        background: #303136; 
+        padding: .5rem 1rem; 
+    } 
+    .collapsible-content p { 
+        margin-bottom: 0; 
+    }
