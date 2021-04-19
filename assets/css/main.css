@@ -1,6 +1,23 @@
 body {
     background-color: #303136;
 }
+#footer {
+    background-color: #5a5a5d;
+    color: #5a5a5d;
+    padding: 3em 0 2em 0;
+    background: #1f1f20;
+    display: block;
+    width: 100%;
+}
+.secret {
+    color: #5a5a5d;
+}
+.copyright, h2 {
+    padding-right: 30px;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    text-align: right;
+}
 #logo {
     width: 7%;
     height: 7%;
@@ -25,8 +42,20 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+.CudaImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+}
 code {
     background-color: #636469;
+    border-radius: 3px;
+}
+#codeBlock {
+    background-color: #636469;
+    border-radius: 3px;
 }
 #maintext {
     margin:auto;
@@ -35,7 +64,7 @@ code {
     width: 75%;
 }
 a:link {
-    color: #FFFFFF;
+    color: #996600;
 }
 a:visited {
     color: #996600;
@@ -55,8 +84,7 @@ a:hover {
     overflow: hidden;
     float: none;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 20%;
 }
 .navbar a {
     float: left;
@@ -188,7 +216,7 @@ a:hover {
         transition: max-height .25s ease-in-out; 
     } 
     .toggle:checked + .lbl-toggle + .collapsible-content { 
-        max-height: 350px; 
+        max-height: 500px; 
     } 
     .toggle:checked+.lbl-toggle { 
         border-bottom-right-radius: 0; 
@@ -201,3 +229,77 @@ a:hover {
     .collapsible-content p { 
         margin-bottom: 0; 
     }
+.glitch {
+    font-size:2em;
+    position: relative;
+    text-shadow: 
+        0.05em 0 0 rgba(255,0,0,.75),
+        -0.025em -.05em 0 rgba(0,255,0,.75),
+        0.025em 0.05em 0 rgba(0,0,255,.75);
+
+    animation: glitch 500ms infinite;
+}
+
+.glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch span:first-child {
+    animation: glitch 650ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-0.06em, -0.025em);
+    opacity: 0.8;
+}
+.glitch span:last-child {
+    animation: glitch 375ms infinite;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    transform: translate(0.05em, 0.025em);
+    opacity: 0.8;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 
+        0.05em 0 0 rgba(255,0,0,.75),
+        -0.05em -.025em 0 rgba(0,255,0,.75),
+        -0.025em 0.05em 0 rgba(0,0,255,.75);
+    }
+    14% {
+        text-shadow: 
+        0.05em 0 0 rgba(255,0,0,.75),
+        -0.05em -.025em 0 rgba(0,255,0,.75),
+        -0.025em 0.05em 0 rgba(0,0,255,.75);
+    }
+    15% {
+        text-shadow: 
+        -0.05em -0.025em 0 rgba(255,0,0,.75),
+        0.025em 0.025em 0 rgba(0,255,0,.75),
+        -0.05em -0.05em 0 rgba(0,0,255,.75);
+    }
+    49% {
+        text-shadow: 
+        -0.05em -0.025em 0 rgba(255,0,0,.75),
+        0.025em 0.025em 0 rgba(0,255,0,.75),
+        -0.05em -0.05em 0 rgba(0,0,255,.75);
+    }
+    50% {
+        text-shadow: 
+        0.025em 0.05 0 rgba(255,0,0,.75),
+        0.05em -.05em 0 rgba(0,255,0,.75),
+        0.0em -0.05em 0 rgba(0,0,255,.75);
+    }
+    99% {
+        text-shadow: 
+        0.025em 0.05 0 rgba(255,0,0,.75),
+        0.05em -.05em 0 rgba(0,255,0,.75),
+        0.0em -0.05em 0 rgba(0,0,255,.75);
+    }
+    100% {
+        text-shadow: 
+        -0.025em 0 0 rgba(255,0,0,.75),
+        -0.025em -0.025em 0 rgba(0,255,0,.75),
+        -0.025em -0.05em 0 rgba(0,0,255,.75);
+    }
+}

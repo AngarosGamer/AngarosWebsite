@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+
+<!-- If you're seeing this, you're definitely a Russian spy stealing intelligence -->
+
 <html>
     <head>
         <title>Angaros - Get help</title>
@@ -6,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <script src="assets/js/main.js"></script>
-        <link rel="shortcut icon" type="image/x-icon" href="" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/WebpageIcon.jpg" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKMYGRM19T"></script>
         <script>
@@ -30,12 +33,15 @@
         </header>
         <div class="navbar">
             <a href="index.html">Home</a>
-            <a id="navbarglow" class="active" href="PhoenixGuide.html">PhoenixMiner guide</a>
+            <a id="navbarglow" class="activeNav" href="PhoenixGuide.html">PhoenixMiner guide</a>
             <a href="XMRigGPUGuide.html">XMRig GPU guide</a>
             <a href="XMRigCPUGuide.html">XMRig CPU guide</a>
+            <a href="Gminer.html">GMiner guide</a>
             <a href="RichPresence.html">Rich Presence</a>
+            <a href="SaladMobile.html">Salad Mobile</a>
         </div>
         <div id="maintext">
+            <br>
             <br>
             
             <h1>Use Salad in your command line with PhoenixMiner</h1>
@@ -98,7 +104,7 @@
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>You'll first want to find PhoenixMiner from your Salad files. This can be done, in windows, by searching for <code>%appdata%</code>, and opening that folder. Next, navigate to the <code>plugin-bin</code> folder, and open the latest PhoenixMiner version you can find. For the rest of this guide, we'll be doing our operations in that folder.</p>
-                        <p>Should you not find it, or followed this guide specifically because it didn't work on Salad, you can find the download of the folder over <a href="https://github.com/SaladTechnologies/plugin-downloads/releases/tag/phoenixminer-5-5c">here</a> (the zip file)</p>
+                        <p>Should you not find it, or followed this guide specifically because it didn't work on Salad, you can find the download of the folder over <a href="https://github.com/SaladTechnologies/plugin-downloads/releases/tag/phoenixminer-5-5c" target="_blank">here</a> (the zip file)</p>
                     </div>
                 </div>
                 <hr>
@@ -106,7 +112,7 @@
                 <label for="collapsible7" class="lbl-toggle">Step 2: Find your pool and worker ID</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Here is <a href="https://support.salad.io/hc/en-us/articles/360042215512-How-To-Find-Your-Salad-Log-Files">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
+                        <p>Here is <a href="https://support.salad.io/hc/en-us/articles/360042215512-How-To-Find-Your-Salad-Log-Files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
                         <p>It should look something like this:</p>
                         <div class ="row">
                             <div class="column"><img src="images/RigIDs.png" alt="Snow" style="width:100%"></div>
@@ -126,7 +132,7 @@
                         <p><b>Remember to replace the ETH address with your own ETH wallet address in the -wal option, or you won't be getting earnings</b></p> 
                         <p>And on the second line, just add <code>pause</code></p>
                         <p>The final result of the bat file should look like:</p>
-                        <p><code>PhoenixMiner.exe -pool ssl://us1.ethermine.org:5555 -wal 0x6ff85749ffac2d3a36efa2bc916305433fa93731.p36pcuzwyhvd2fx<br>pause</code></p>
+                        <p><code><div id="codeBlock">PhoenixMiner.exe -pool ssl://us1.ethermine.org:5555 -wal 0x6ff85749ffac2d3a36efa2bc916305433fa93731.p36pcuzwyhvd2fx<br>pause</div></code></p>
                         <p>Should you be closer to Europe, your primary pool should be <code>ssl://eu1.ethermine.org:5555</code>, and if you're closer to North America, then use <code>ssl://us1.ethermine.org:5555</code></p>
                     </div>
                 </div>
@@ -153,25 +159,12 @@
                             <li>You'll want <code>fanmin</code> to be smaller than <code>fanmax.</code></li>
                             <li>You'll want possible temperatures for <code>tstart</code> and <code>tstop</code>. (say, if your GPU is unable to go below 50°C, don't set a <code>tstart</code> at 30°C, otherwise it will never happen, same for <code>tstop</code>.)</li>
                         </ul>
-                        <p>If you want to view some of the others / more advanced features, you can check<a href="https://www.nicehash.com/blog/post/phoenixminer-command-line-options-(extra-launch-parameters)">this post.</a></p>
+                        <p>If you want to view some of the others / more advanced features, you can check <a href="https://www.nicehash.com/blog/post/phoenixminer-command-line-options-(extra-launch-parameters)" target="_blank">this post.</a></p>
                     </div>
                 </div>
                 <hr>
                 <input id="collapsible10" class="toggle" type="checkbox"> 
-                <label for="collapsible10" class="lbl-toggle">General info for the additional commands</label>
-                <div class="collapsible-content">
-                    <div class="content-inner">
-                        <ul>
-                            <li>You'll want <code>tstop</code> to be higher than <code>tstart</code>.</li>
-                            <li>You'll want <code>fanmin</code> to be smaller than <code>fanmax.</code></li>
-                            <li>You'll want possible temperatures for <code>tstart</code> and <code>tstop</code>. (say, if your GPU is unable to go below 50°C, don't set a <code>tstart</code> at 30°C, otherwise it will never happen, same for <code>tstop</code>.)</li>
-                        </ul>
-                        <p>If you want to view some of the others / more advanced features, you can check <a href="https://www.nicehash.com/blog/post/phoenixminer-command-line-options-(extra-launch-parameters)">this post.</a></p>
-                    </div>
-                </div>
-                <hr>
-                <input id="collapsible11" class="toggle" type="checkbox"> 
-                <label for="collapsible11" class="lbl-toggle">Using your Salad CLI</label>
+                <label for="collapsible10" class="lbl-toggle">Using your Salad CLI</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>Save the file, and close it. Then just run it by double clicking it and verify that shares are being sent and received. If all works well, you'll be earning in no time!</p>
@@ -191,5 +184,15 @@
                 <span class="popuptext" id="myPopup"><iframe src="https://discord.com/widget?id=829758764243877950&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></span>
             </div>
         </div>
+        <section id="footer">
+            <div class="inner">
+                <header>
+                    <h2>Angaros' Website</h2>
+                </header>
+                <div class="copyright">
+                    <a class="secret" href="secret.html">&copy;</a> Made by Angaros 2021
+                </div>
+            </div>
+        </section>
     </body>
 </html>
