@@ -84,7 +84,7 @@ a:hover {
     overflow: hidden;
     float: none;
     position: absolute;
-    left: 20%;
+    left: 17%;
 }
 .navbar a {
     float: left;
@@ -216,7 +216,7 @@ a:hover {
         transition: max-height .25s ease-in-out; 
     } 
     .toggle:checked + .lbl-toggle + .collapsible-content { 
-        max-height: 500px; 
+        max-height: 700px; 
     } 
     .toggle:checked+.lbl-toggle { 
         border-bottom-right-radius: 0; 
