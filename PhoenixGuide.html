@@ -99,7 +99,7 @@
                     <div class="content-inner">
                         <ul>
                             <li>Internet Connection</li>
-                            <li>A GPU with more than 4GB of VRAM (4GB cards <b>not</b> included)</li>
+                            <li>A GPU with 3GB+ VRAM</li>
                             <li>500MB disk space</li>
                             <li>Have installed Salad and mined once (that's how you get the logs, so the Rig and wallet ID)</li>
                         </ul>
@@ -135,12 +135,17 @@
                     <div class="content-inner">
                         <p>Go in the PhoenixMiner folder you installed in Step 1. You'll want to make a new file named <code>start.bat</code> (or any name you want, I just chose start for conveniency). To do that, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
                         <p>And next you'll want to start editing it.</p>
-                        <p>On the first line, type: <code>PhoenixMiner.exe -pool ssl://us1.ethermine.org:5555 -pool2 ssl://eu1.ethermine.org:5555 -wal {ETH wallet and rig}</code></p>
-                        <p><b>Remember to replace the ETH address with your own ETH wallet address in the -wal option, or you won't be getting earnings</b></p> 
+                        <p>On the first line, type: <code>PhoenixMiner.exe -pool {pool} -wal {ETH wallet and rig}</code></p>
+                        <p>First, the pool and port:</p>
+                        <ul>
+                            <li>If you have a 3GB - 4GB VRAM GPU: <code>ssl://eu1-etc.ethermine.org:5555</code> (You can change locations: eu1, us1, asia1, eu2, us2, asia2)</li>
+                            <li>If you have a 6GB+ VRAM GPU: <code>ssl://eu1.ethermine.org:5555</code> (You can change locations: eu1, us1, asia1, eu2, us2, asia2)</li>
+                        </ul>
+                        <p>Second, the wallet and rig, where you just have to replace with the values you have in your logs.</p>
+                        <p><b>Remember to replace the ETH address with your own ETH wallet address in the -wal option, or you won't be getting earnings.</b></p> 
                         <p>And on the second line, just add <code>pause</code></p>
-                        <p>The final result of the bat file should look like:</p>
+                        <p>The final result of the bat file should look like, for a 6GB+ VRAM GPU:</p>
                         <p><code><div id="codeBlock">PhoenixMiner.exe -pool ssl://us1.ethermine.org:5555 -wal 0x6ff85749ffac2d3a36efa2bc916305433fa93731.p36pcuzwyhvd2fx<br>pause</div></code></p>
-                        <p>Should you be closer to Europe, your primary pool should be <code>ssl://eu1.ethermine.org:5555</code>, and if you're closer to North America, then use <code>ssl://us1.ethermine.org:5555</code></p>
                     </div>
                 </div>
                 <hr>
