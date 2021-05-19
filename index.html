@@ -2,19 +2,22 @@
 
 <!-- If you're seeing this, you're definitely a Russian spy stealing intelligence -->
 
-<html>
+<!-- Div is qt, can't say otherwise -->
+
+<html lang="en">
     <head>
         <title>Angaros - Get help</title>
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="angaros.vercel.app/index.html">
         <meta property="og:title" content="Angaros - Get Help!" />
-        <meta property="og:description" content="Find my 'creations' and get some help with them! Hope you enjoy, took some time. Some of them still get regular updates, if you're interested in them." />
-        <meta property="og:url" content="https://angaros.vercel.app" />
+        <meta property="og:description" content="Welcome to my website! We do CLI guides for Salad, Salad Mobile, and Discord Rich Presence!" />
+        <meta property="og:url" content="https://angaros.vercel.app/index.html" />
         <meta property="og:image" content="images/WebpageIcon.jpg" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <script src="assets/js/main.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="images/WebpageIcon.ico" />
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKMYGRM19T"></script>
         <script>
@@ -28,54 +31,56 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2101819055725902" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <div>
-                <a href="index.html"><img id="logo" src="images/MainLogoGoingDark.jpg" class="center"></img></a>
-            </div>
-            <div>
-                <h1 id="name">Angaros' website</h1>
-            </div>
-        </header>
+      <!-- Header -->
+      <div class="container">
         <div class="navbar">
-            <a id="navbarglow" class="activeNav" href="index.html">Home</a>
-            <a href="PhoenixGuide.html">PhoenixMiner guide</a>
-            <a href="XMRigGPUGuide.html">XMRig GPU guide</a>
-            <a href="XMRigCPUGuide.html">XMRig CPU guide</a>
-            <a href="Gminer.html">GMiner guide</a>
-            <a href="NBMinerGuide.html">NBMiner</a>
-            <a href="RichPresence.html">Rich Presence</a>
-            <a href="SaladMobile.html">Salad Mobile</a>
+          <a href="index.html"><img src="images/WebpageIcon.ico" class="logo"></a><div class="name">Angaros</div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="cli.html">CLI</a></li>
+              <li><a href="otherapps.html">Other apps</a></li>
+            </ul>
+          </nav>
         </div>
-        <div id="mainhome">
-            <br><br>
-            <hr>
-            <h1>Home Menu</h1>
-            <p>Hey there!<br>Welcome to my website!</p>
-            <p>I'm just here to enjoy myself and bring you what I enjoy and work on at the same time!</p>
-            <p>Pick your choice from the options in the top, using the menu options.</p>
-            <p>Don't forget to roam around too, who knows, you might find something interesting?</p>
-            <p>Maybe... the author of this website made an easter egg?</p>
-            <h3>Happy browsing!</h3>
-            
 
+      <!-- End Header -->
+
+        <div class="row">
+          <div class="col">
+            <h1 id="title">Angaros</h1>
+            <p>Welcome to my website, make yourself at home!</p>
+          </div>
+
+          <!-- 4 Info Cards -->
+
+          <div class="col">
+            <a href="index.html"> <!-- Home -->
+              <div class="card card1">
+                <h5>Home</h5>
+                <p>You're already here mate!</p>
+              </div>
+            </a>
+            <a href="cli.html"> <!-- CLI Guides -->
+              <div class="card card2">
+                <h5>CLI</h5>
+                <p>Separate miner, Salad earnings!</p>
+              </div>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.saladiounofficial" target="_blank"> <!-- Salad Mobile page (website) -->
+              <div class="card card3">
+                <h5>Salad Mobile</h5>
+                <p>Visit us!</p>
+              </div>
+            </a>
+            <a href="https://rich-presence-website.vercel.app/index.html" target="_blank"> <!-- Rich Presence page (website) -->
+              <div class="card card4">
+                <h5>Rich Presence</h5>
+                <p>That's just so cool!</p>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="icon-bar">
-            <div class="topClass">
-                <a class="toTop" id="js-top" href=""><img src="images/toTop.png"></a>
-            </div>
-            <div class="popup" onclick="myFunction()"><div><img src="images/DiscordLogo.png"></img></div>
-                <span class="popuptext" id="myPopup"><iframe src="https://discord.com/widget?id=829758764243877950&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></span>
-            </div>
-        </div>
-        <section id="footer">
-            <div class="inner">
-                <header>
-                    <h2>Angaros' Website</h2>
-                </header>
-                <div class="copyright">
-                    <a class="secret" href="secret.html">&copy;</a> Made by Angaros 2021
-                </div>
-            </div>
-        </section>
+      </div>
     </body>
 </html>
