@@ -141,12 +141,14 @@
                         <p>First, the algo:</p>
                         <ul>
                             <li>If you're on a 3GB - 4GB VRAM GPU, choose <code>-a beamv3</code></li>
-                            <li>If you're on a 4GB+ VRAM GPU, choose <code>-a ethash</code></li>
+							<li>If you're on a 3GB - 4GB VRAM GPU, choose <code>-a etchash</code></li>
+                            <li>If you're on a 6GB+ VRAM GPU, choose <code>-a ethash</code></li>
                         </ul>
                         <p>Second, the pool and port: You'll want to use one of these two:</p>
                         <ul>
                             <li>If you have a 3GB - 4GB VRAM GPU: <code>stratum+tcp://beamv3.eu.nicehash.com:3387</code> (You can change locations: eu, usa, eu-west, eu-north, usa-west, usa-east)</li>
-                            <li>If you have a 4GB+ VRAM GPU: <code>ethproxy+tcp://eu1.ethermine.org:4444</code> (You can change locations: eu1, us1, asia1, eu2, us2, asia2)</li>
+                            <li>If you have a 3GB - 4GB VRAM GPU: <code>ethproxy+tcp://eu1-etc.ethermine.org:4444</code> (You can change locations: eu1, us1, asia1, eu2, us2, asia2)</li>
+							<li>If you have a 6GB+ VRAM GPU: <code>ethproxy+tcp://eu1.ethermine.org:4444</code> (You can change locations: eu1, us1, asia1, eu2, us2, asia2)</li>
                         </ul>
                         <p>Third, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>nicehash</b> values for wallet address and rig ID.</p>
                         <p>Here's an example of a completed 4GB+ VRAM GPU file:</p>
