@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: angaros.vercel.app
+Token: 6e7cbb2ae8800479bcb1e63c97b9abcb42b89e98c9de8425dc0f58a785a462f8
