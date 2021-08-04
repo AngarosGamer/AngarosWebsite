@@ -157,8 +157,8 @@
                         </ul>
                         <p>Second, the pool and port: You'll want to use one of these two:</p>
                         <ul>
-                            <li><code>stratum+tcp://randomxmonero.usa.nicehash.com:3385</code> (US pool)</li>
-                            <li><code>stratum+tcp://randomxmonero.eu.nicehash.com:3385</code> (Europe pool)</li>
+                            <li><code>stratum+tcp://kawpow.usa.nicehash.com:3385</code> (US pool)</li>
+                            <li><code>stratum+tcp://kawpow.eu.nicehash.com:3385</code> (Europe pool)</li>
                         </ul>
                         <p>Third, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>nicehash</b> values for wallet address and rig ID.</p>
                         <p>Lastly, since we are uing NiceHash pools, add <code>--nicehash</code> at the end of that string</p>
@@ -166,7 +166,7 @@
                         <code>
                             <div id="codeBlock">
                                 @echo off<br>
-                                xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+tcp://randomxmonero.eu.nicehash.com:3385 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -k -a kawpow --nicehash<br>
+                                xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+tcp://kawpow.eu.nicehash.com:3385 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -k -a kawpow --nicehash<br>
                                 pause
                             </div>
                         </code>
