@@ -8,7 +8,7 @@ Code in the website is horrible, because it is based on work I had done while I 
 # Content you can pull request
 
 For now, the only pull requests I will be accepting are those editing the actual guides (which I'll verify before merging. This is because I don't have the time to manually verify the validity of new HTML merging, and I already plan on overwriting what I currently have for the website.
-Ant additions are still going to be looked at, don't hesitate to make a pull request to help out.
+Any additions are still going to be looked at, don't hesitate to make a pull request to help out.
 
 # Suggestions and additions not pertaining to a pull request
 
