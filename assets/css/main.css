@@ -30,13 +30,13 @@
 }
 .container3 {
   width: 100%;
-  height:max-content;
+  height:100%;
   background-image: linear-gradient(#303136, #c69c6c);
   background-position: center;
   background-size: cover;
   padding-left: 8%;
   padding-right: 8%;
-  padding-bottom: 20px;
+  padding-bottom: 25vh;
   box-sizing: border-box;
 }
 /* End Header Formatting */
