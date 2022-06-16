@@ -27,7 +27,7 @@ body {
 }
 .container2 {
   width: 100%;
-  height: 150vh;
+  height: 100%;
   background-image: linear-gradient(#303136, #c69c6c);
   background-position: center;
   background-size: cover;
