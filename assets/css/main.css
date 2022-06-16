@@ -211,7 +211,9 @@ a {
 }
 .rows {
   margin: 0 -5px;
-  display: flex;;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .rows:after {
   content: "";
@@ -222,10 +224,13 @@ a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   border-radius: 5px;
   min-height: 200px;
+  max-width: 300px;
+  min-width: 9.375em;
   padding: 16px;
   text-align: center;
   background-color: #303136;
   transition: transform 0.5s;
+  margin: 0;
 }
 .cards:hover {
   transform: translateY(-5px);
@@ -331,7 +336,6 @@ width: 20%;
   /* Collapsibles for guides */
   .column {
     float: left;
-    width: 33.33%;
     padding: 5px;
   }
   .row::after {
