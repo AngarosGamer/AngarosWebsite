@@ -6,7 +6,14 @@
   list-style: none;
   font-family: "lato", sans-serif;
 }
-
+html {
+  height: 100%
+}
+body {
+  background-color: #c69c6c;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 /* Header Formatting - 3 different for each HTML page variant */
 .container {
   width: 100%;
@@ -30,13 +37,13 @@
 }
 .container3 {
   width: 100%;
-  height:max-content;
+  height:100%;
   background-image: linear-gradient(#303136, #c69c6c);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-position: center;
-  background-size: cover;
   padding-left: 8%;
   padding-right: 8%;
-  padding-bottom: 20px;
   box-sizing: border-box;
 }
 /* End Header Formatting */
@@ -215,7 +222,6 @@ a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   border-radius: 5px;
   min-height: 200px;
-  max-height: 200px;
   padding: 16px;
   text-align: center;
   background-color: #303136;
