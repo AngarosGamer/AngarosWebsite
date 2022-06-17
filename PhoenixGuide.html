@@ -113,6 +113,7 @@
                     <div class="content-inner">
                         <p>You'll first want to find PhoenixMiner from your Salad files. This can be done, in windows, by searching for <code>%appdata%</code>, and opening that folder. Next, navigate to the <code>plugin-bin</code> folder, and open the latest PhoenixMiner version you can find. For the rest of this guide, we'll be doing our operations in that folder.</p>
                         <p>Should you not find it, or followed this guide specifically because it didn't work on Salad, you can find the download of the folder over <a href="https://phoenixminer.info/downloads/PhoenixMiner_6.2c_Windows.zip" target="_blank">here</a> (the zip file)</p>
+						<p>You would also want to whitelist the folder that you place PhoenixMiner in, just to ensure that your antivirus doesn't decide to interfere.<br><a href="https://support.salad.com/category/30-anti-virus/" target="_blank">Here</a> are some guides on how to whitelist a folder with most antiviruses.</p>
                     </div>
                 </div>
                 <hr>
@@ -139,10 +140,13 @@
                     <div class="content-inner">
                         <p>- Go in the PhoenixMiner folder you installed in Step 1. You'll want to make a new file named <code>start.bat</code> (or any name you want, I just chose start for conveniency). To do that, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
                         <p>- And next you'll want to start editing it.</p>
-                        <p>- On the first line, type: <code>PhoenixMiner.exe -pool <i>{pool}</i> -wal <i>{wallet ID}</i>.<i>{rig ID}</i></code></p>
+                        <p>- Enter the following two lines:<br>
+						<code>PhoenixMiner.exe -pool <i>&lt;pool&gt;</i> -wal <i>&lt;Wallet ID&gt;</i>.<i>&lt;Rig ID&gt;</i></code><br>
+						<code>pause</code></p>
+						<li>The <code>pause</code> just ensures that, if the miner closes unexpectedly, the CMD window will stay open so you can troubleshoot easily.</li></p><br>
                         <p>- First, the pool and port:</p>
                         <ul>
-                            <li>If you have a 3GB - 4GB VRAM GPU, you can mine either Ethereum Classic, or Ravencoin:
+                            <li>If you have a 4GB VRAM GPU, you can mine either Ethereum Classic, or Ravencoin:
 							<br><code>eu1-etc.ethermine.org:4444</code> - For Ethermine. You can optionally change locations to the one closest to you: eu1, us1, asia1.
 							<br><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li><br>
 							
@@ -152,19 +156,16 @@
 							
 							<li>Our knowledge for Prohashing is limited, due to it being relatively new...
 							<br><code>stratum+tcp://prohashing.com:3339</code> should be the correct pool for Ethash (Ethereum).
-							<br><code>stratum+tcp://prohashing.com:3361</code> should be the correct pool for KawPow (Ravencoin). Ensure that the end of your 'really long text' has <code>,a=kawpow</code> - Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.
+							<br><code>stratum+tcp://prohashing.com:3361</code> should be the correct pool for KawPow (Ravencoin).
 							
-							
-							<br><br><br><code>-wal salad</code> and <code>-pass {That long string of text}</code></li>
+							<br><br>Your Wallet ID for Prohashing would be <code>-wal salad</code> and instead of a Rig ID, you'd use the separate argument <code>-pass {That long string of text}</code></li>
                         </ul>
 						<br><br>
-                        <p>- Second, the wallet and rig. You just have to replace <code>{wallet ID}</code> and <code>{rig ID}</code> with the values you have in your logs.</p>
-                        <p><b>Remember to replace the ETH address with your own ETH wallet address in the -wal option, or you won't be getting earnings.</b></p>
+                        <p>- Second, the wallet and rig. You just have to replace <code><i>&lt;Wallet ID&gt;</i></code> and <code><i>&lt;Rig ID&gt;</i></code> with the values you have in your logs.</p>
+                        <p><b>If you do not replace the Wallet and Worker ID with your own IDs in the -wal option, you won't be getting any earnings.</b></p>
 						<br><p>For Prohashing, Ensure that the end of your 'really long text' has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>. Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p>
                         
-						<br><p>- And on the second line, just add <code>pause</code>
-						<li>This just ensures that, if the miner closes unexpectedly, the CMD window will stay open so you can troubleshoot easily.</li></p>
-                        <p>The final result of the bat file should look like, for a 6GB+ VRAM GPU:</p>
+						<p>The final result of the bat file should look like, for a 6GB+ VRAM GPU:</p>
                         <p><code><div id="codeBlock">PhoenixMiner.exe -pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -wal 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>pause</div></code></p>
                     </div>
                 </div>
@@ -202,7 +203,7 @@
                         <p>Save the file, and close it. Then just run it by double clicking it and verify that shares are being sent and received. If all works well, you'll be earning in no time!</p>
                         <p>It can take some time until your earnings start showing up in Salad, so don't expect to earn within a minute. If after about 30 minutes you don't receive anything, then something went wrong. Verify that you followed all the steps right, and retry once the issue is fixed.</p>
                         <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
-                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with the company.</p>
+                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
                     </div>
                 </div>
                 <hr>
