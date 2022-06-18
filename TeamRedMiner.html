@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+
+<!-- If you're seeing this, you're definitely a Femboy spy stealing intelligence -->
+
+<html lang="en">
+    <head>
+        <title>Angaros - TeamRedMiner</title>
+        <meta property="og:type" content="angaros.vercel.app/TeamRedMiner.html">
+        <meta property="og:title" content="Angaros - TeamRedMiner guide!" />
+        <meta property="og:description" content="Find the TeamRedMiner guide to Salad CLI mining!" />
+        <meta property="og:url" content="https://angaros.vercel.app/TeamRedMiner.html" />
+        <meta property="og:image" content="images/WebpageIcon.jpg" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <script src="assets/js/main.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="images/WebpageIcon.ico" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKMYGRM19T"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZKMYGRM19T');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3813448291104059"
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <!-- Header -->
+      <div class="container3">
+        <div class="navbar">
+            <a href="index.html"><img src="images/WebpageIcon.ico" class="logo"></a><div class="name">Angaros</div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="cli.html">CLI</a></li>
+              <li><a href="otherapps.html">Other apps</a></li>
+            </ul>
+          </nav>
+        </div>
+        <hr>
+        <button class="glow-on-hover" onclick="goBack()">&#8592; Go Back</button>
+        <div id="maintext">
+            <br><br>
+            <h1>TeamRedMiner guide</h1>
+            <p>
+                Made by FemboyNova#4002 - Last update 17/06/2021 @21:58 UTC+2
+            </p>
+
+            <hr>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible2" class="toggle" type="checkbox"> 
+                <label for="collapsible2" class="lbl-toggle">Advantages</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Running CLI allows you to:</p>
+                        <ul>
+                            <li>Customise GPU usage</li>
+                            <li>Support for older GPUs</li>
+                            <li>Set max temperatures and start temperatures</li>
+                            <li><i>Potentially</i> earn a bit more</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible3" class="toggle" type="checkbox"> 
+                <label for="collapsible3" class="lbl-toggle">Extra Help</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>I'm in the process of making a video guide for XMRig CPU. Stay tuned!</p>
+                        <p>Join <a id="link" href="https://discord.gg/TujgMYdPdh">my Discord server</a> for extra help!</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible4" class="toggle" type="checkbox"> 
+                <label for="collapsible4" class="lbl-toggle">Warnings</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>The following content is not official, but has been approved. It is not being monitored by Salad. The use of the following is at your own risk, and we will not be held liable for any damage, loss of information, or any issue whatsoever.
+                            <br><br>
+                            We cannot and will not pay you back in any event.</p>
+                            <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a childrens' playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible5" class="toggle" type="checkbox"> 
+                <label for="collapsible5" class="lbl-toggle">Prerequisites</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <ul>
+                            <li>Internet Connection</li>
+                            <li>A GPU with 4GB+ VRAM</li>
+                            <li>500MB disk space</li>
+                            <li>Have installed Salad (<a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> if you wish to use Nicehash or Ethermine pools)</li>
+                            <li>To have mined once before (This is to generate your Rig and wallet ID, shown in Salad's logs in later steps)</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible6" class="toggle" type="checkbox"> 
+                <label for="collapsible6" class="lbl-toggle">Step 1: Install TeamRedMiner</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Start by installing the latest TeamRedMiner version, found <a id="link" href="https://github.com/todxx/teamredminer/releases" target="_blank">here</a>.  This will install TeamRedMiner miner. It is a rather small package so it shouldn't take too long. Extract it to your folder of choice.</p>
+						<p>You would also want to whitelist the folder that you place TeamRedMiner in, just to ensure that your antivirus doesn't decide to interfere.<br><a href="https://support.salad.com/category/30-anti-virus/" target="_blank">Here</a> are some guides on how to whitelist a folder with most antiviruses.</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible8" class="toggle" type="checkbox"> 
+                <label for="collapsible8" class="lbl-toggle">Step 2: Find your pool and worker ID</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Here is <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
+                        <p>Note that Salad 1.0 no longer gives the required IDs to mine with Nicehash and Ethermine in the logs - If you wish to use either of these pools, you'll have to use Salad <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.8" target="_blank">0.5.8</a> to get the IDs required for these pools.</p>
+						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. TeamRedMiner, opening the latest log inside of said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
+                        <p>It should look something like this:</p>
+                        <div class ="row">
+                            <div class="column"><img src="images/RigIDs.png" alt="Snow" style="width:100%"></div>
+                            <div class="column"><img src="images/MinerIDs.png" alt="Snow" style="width:100%"></div>
+                        </div>
+                        <p>You'll want to keep these for when we do the linking</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible9" class="toggle" type="checkbox"> 
+                <label for="collapsible9" class="lbl-toggle">Step 3: Making your Salad CLI</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Go in the TeamRedMiner folder you installed in Step 1. You'll find various files here, most commonly ones ending with '.bat' (Batch Files). You can choose to either edit one of these, or just create a fresh new batch file.<br><li>You can optionally delete any .bat files that you are not using, to clear some clutter.</li></p>
+                        <p>If you choose to create a new .bat file, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
+                        <p>At the end of the day, you're going to end up with a .bat file that should look something like this:</p>
+                        <li>Nicehash/Ethermine:</li>
+						<code>
+                            <div id="codeBlock">
+                            teamredminer.exe -a <i>&lt;algorithm&gt;</i> -o <i>&lt;pool&gt;</i> -u <i>&lt;Wallet Address&gt;</i>.<i>&lt;Rig ID&gt;</i><br>
+                            </div>
+                        </code>
+						<br><li>Prohashing:</li>
+						<code>
+							<div id="codeBlock">
+                            teamredminer.exe -a <i>&lt;algorithm&gt;</i> -o <i>&lt;pool&gt;</i> -u salad -p <i>&lt;Your Prohashing ID&gt;</i><br>
+							</div>
+						</code>
+                        <br><p>First, the algorithm. There are 3 options:
+                            <ul>
+                                <li>Ethereum (5GB+ GPUs): <code>ethash</code></li>
+                                <li>KawPow (4GB+ GPUs): <code>kawpow</code></li>
+                                <li>Ethereum Classic (4GB+ GPUs): <code>etchash</code></li>
+                            </ul>
+                        </p>
+                        <p>Second, the pool: You'll want to use one of the following:</p>
+                        <ul>
+                            <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethereum. If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
+                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li><br>
+                            <li><code>eu1.ethermine.org:4444</code> For Ethermine Ethereum. You can optionally change locations to the one closest to you: eu1, us1, us2, asia1, asia2.</li>
+							<li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li><br>
+							<li><code>stratum+tcp://prohashing.com:3339</code> For Prohashing Ethash (Ethereum).<br>
+							<li><code>stratum+tcp://prohashing.com:3361</code> For Prohashing KawPow (Ravencoin).</li>
+                        </ul><br>
+                        <p>Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for the Nicehash format, the <b>Ethermine</b> values for the Ethermine format, and the <b>Prohashing</b> values for the Prohashing format.</p>
+						<p>Ensure that the end of your 'really long text' Prohashing ID has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
+                        <p>Here's an example of a completed ETH (Ethereum) file for Nicehash:</p>
+                        <code>
+                            <div id="codeBlock">
+                                TeamRedMiner -a ethash -u stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -u 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
+                            </div>
+                        </code>
+						<br><p>And here's an example of a completed RVN (Raven Coin) file for Prohashing:</p>
+						<code>
+							<div id="codeBlock">
+								TeamRedMiner -a kawpow -o stratum+tcp://prohashing.com:3361 -user Salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787<br>
+							</div>
+						</code>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible10" class="toggle" type="checkbox"> 
+                <label for="collapsible10" class="lbl-toggle">Some additional .bat commands</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Here's some pretty useful TeamRedMiner commands you can use:</p>
+                        <ul>
+                            <li><code>--devices</code> : A comma separated list of which GPUs to use. Device IDs start counting from 0.</li>
+                            <li><code>--temp_limit=x</code> : Stops the miner when that temperature (x) is reached.</li>
+                            <li><code>--temp_resume=Y</code> : Starts the miner back up once GPU temperature has cooled down to (y).</li>
+                        </ul>
+                        <p>The full in-depth list of TeamRedMiner miner arguments can be found <a id="link" href="https://github.com/todxx/teamredminer/blob/master/USAGE.txt" target="_blank">Here</a>.</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible11" class="toggle" type="checkbox"> 
+                <label for="collapsible11" class="lbl-toggle">Using your Salad CLI</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Now just save that .bat file, close it, and run it. It should work if everything was set up properly.</p>
+                        <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you follwed all steps and retry once the issue is fixed.</p>
+                        <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
+                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </body>
+</html>
