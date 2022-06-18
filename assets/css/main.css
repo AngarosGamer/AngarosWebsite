@@ -149,7 +149,7 @@ h5 {
 }
 p {
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 20px;
 }
 code {
@@ -238,6 +238,36 @@ a {
 }
 .cards p {
   color: #c69c6c;
+}
+
+.suppgpus {
+	justify-content: center;
+	display: flex;
+	margin-bottom: 15px;
+}
+.minersuppNVIDIA {
+	background-color: green;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+	width: 50px;
+}
+.minersuppAMD {
+	background-color: red;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+	width: 39px;
+}
+.minersuppIntel {
+	background-color: #0087ff;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+	width: 40px;
 }
 
 /* Cards system version n°2 */
