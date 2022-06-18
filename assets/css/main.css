@@ -155,11 +155,12 @@ p {
 code {
   background-color: #636469;
   border-radius: 3px;
+  color: #fff;
 }
 #codeBlock {
   background-color: #636469;
   border-radius: 3px;
-  color: #ffffff;
+  color: #fff;
 }
 a {
   color: #c69c6c;
