@@ -152,17 +152,17 @@
                                 <li>Ethereum (5GB+ GPUs): <code>ethash</code></li>
                                 <li>KawPow (4GB+ GPUs): <code>kawpow</code></li>
                                 <li>Ethereum Classic (4GB+ GPUs): <code>etchash</code></li>
-                                <li>Beam V3 (3GB+ GPUs): <code>beamhashIII</code></li>
+                                <li>Beam (3GB+ GPUs): <code>beamhashIII</code></li>
                                 <li>Bitcoin Gold (2GB+ GPUs): <code>144_5</code></li>
                             </ul>
                         </p>
                         <p>Second, the pool: You'll want to use one of the following:</p>
                         <ul>
-                            <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethereum. If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
-                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
-                            <li><code>stratum+ssl://beamv3.eu.nicehash.com:3387</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://beamv3.auto.nicehash.com:9200</code></li>
-                            <li><code>stratum+ssl://zhash.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://zhash.auto.nicehash.com:9200</code></li><br>
-                            <li><code>eu1.ethermine.org:4444</code> For Ethermine Ethereum. You can optionally change locations to the one closest to you: eu1, us1, us2, asia1, asia2.</li>
+                            <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethash (Ethereum). If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
+                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow (Ravencoin). If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
+                            <li><code>stratum+ssl://beamv3.eu.nicehash.com:3387</code> - For Nicehash BeamhashIII (Beam). If you have issues with SSL, you can alternatively use <code>stratum+tcp://beamv3.auto.nicehash.com:9200</code></li>
+                            <li><code>stratum+ssl://zhash.auto.nicehash.com:443</code> - For Nicehash 144_5 (Bitcoin Gold). If you have issues with SSL, you can alternatively use <code>stratum+tcp://zhash.auto.nicehash.com:9200</code></li><br>
+                            <li><code>eu1.ethermine.org:4444</code> For Ethermine Ethash (Ethereum). You can optionally change locations to the one closest to you: eu1, us1, us2, asia1, asia2.</li>
 							<li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li><br>
 							<li><code>stratum+tcp://prohashing.com:3339</code> For Prohashing Ethash (Ethereum).<br>
 							<li><code>stratum+tcp://prohashing.com:3361</code> For Prohashing KawPow (Ravencoin).</li>
@@ -186,7 +186,7 @@
                         <br><p>And here's an example of a completed BTG (Bitcoin Gold) file for Nicehash:</p>
                         <code>
                             <div id="codeBlock">
-                                miner.exe --algo 144_5 --pers BgoldPoW --server stratum+ssl://zhash.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq
+                                miner.exe --algo 144_5 --pers BgoldPoW --server stratum+ssl://zhash.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
                                 pause                                
                             </div>
                         </code>
