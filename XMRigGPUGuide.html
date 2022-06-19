@@ -98,7 +98,7 @@
                             <li>Internet Connection</li>
                             <li>A GPU with 4GB+ of VRAM (although T-REX, Phoenix, NBminer or GMiner are recommended for 6GB+ GPUs)</li>
                             <li>500MB disk space</li>
-                            <li>Have installed Salad (<a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> if you wish to use Nicehash's pool, rather than Prohashing.</li>
+                            <li>Have installed Salad (<a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> if you wish to use Nicehash's pool, rather than Prohashing.)</li>
                             <li>To have mined once before (This is to generate your Rig and wallet ID, shown in Salad's logs in later steps)
                         </ul>
                     </div>
@@ -145,7 +145,7 @@
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>- Go in the XMRig folder you installed in Step 1. You'll find a file named <code>start.bat</code>. You'll want to open it with notepad, or a code editor.</p>
-                        <p>- Should it not exist, you can also just create it.</p>
+                        <p>Should it not exist, you can also just create it.</p>
                         <p>- We will need to edit the <code>start.bat</code> file, by adding the correct information:</p>
                         <li>Nicehash:</li>
 						<code><div id="codeBlock">
@@ -167,23 +167,24 @@
                         </ul><br>
                         <p>- Second, the pool and port: You'll want to use one of the following:</p>
                         <ul>
-                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - Nicehash KawPow. If you're having issues with the SSL pool, you can use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
+                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - Nicehash KawPow. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
 							<li><code>stratum+tcp://prohashing.com:3361</code> - Prohashing KawPow. Be sure to have <code>,a=kawpow</code> at the end of your 'long string of text'.</li>
 							<br>
-							<li><code>stratum+ssl://randomxmonero.auto.nicehash.com:443</code> - Nicehash RandomX. If you're having issues with the SSL pool, you can use <code>stratum+tcp://randomxmonero.auto.nicehash.com:9200</code></li>
+							<li><code>stratum+ssl://randomxmonero.auto.nicehash.com:443</code> - Nicehash RandomX. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://randomxmonero.auto.nicehash.com:9200</code></li>
 							<li><code>stratum+tcp://prohashing.com:3359</code> - Prohashing RandomX. Be sure to have <code>,a=randomx</code> at the end of your 'long string of text'.</li><br>
                         </ul>
 						<p>- Third, the algorithm. If you wish to use KawPow, use <code>-a kawpow</code>. If you wish to use RandomX, use <code>-a randomx</code>
 						<br>Though currently KawPow is currently more profitable than RandomX, so you'd likely wish to choose that.</p>
                         <p>- Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for 'Wallet Address' and 'Rig ID'.
-						<br>For Prohashing, you'll need to use your 'long string of text' Prohashing ID. If the algorithm indicator at the end of the ID (<code>,a=</code>) doesn't work, try removing the it. It should work without it.</p>
+						<br>For Prohashing, you'll need to use your 'long string of text' Prohashing ID. If the algorithm indicator at the end of the ID (<code>,a=</code>) doesn't work, try removing it. It should work without it.</p>
+						
                         <p>- Here's an example of a completed file for a NVIDIA GPU, using Nicehash KawPow:</p>
                         <code><div id="codeBlock">
                             @echo off<br>
                             xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+ssl://kawpow.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a kawpow -k --nicehash<br>
                             pause
                         </div></code><br>
-						<p>And here's an example of a completed file for an AMD GPU, using Prohashing RandomX:
+						<p>- And here's an example of a completed file for an AMD GPU, using Prohashing RandomX:
 						<code><div id="codeBlock">
                             @echo off<br>
                             xmrig.exe --no-cpu --opencl --donate-level=1 -o stratum+tcp://prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
@@ -214,7 +215,7 @@
                         <p>Save the <code>start.bat</code> file, close it, and run it. It should work if everything was set up properly.</p>
                         <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you follwed all steps and retry once the issue is fixed.</p>
                         <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
-                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract.</p>
+                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
                     </div>
                 </div>
                 <hr>
