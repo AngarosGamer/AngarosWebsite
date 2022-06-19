@@ -129,9 +129,9 @@
                 <label for="collapsible9" class="lbl-toggle">Step 3: Making your Salad CLI</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Go in the TeamRedMiner folder you installed in Step 1. You'll find various files here, most commonly ones ending with '.bat' (Batch Files). You can choose to either edit one of these, or just create a fresh new batch file.<br><li>You can optionally delete any .bat files that you are not using, to clear some clutter.</li></p>
-                        <p>If you choose to create a new .bat file, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
-                        <p>At the end of the day, you're going to end up with a .bat file that should look something like this:</p>
+                        <p>- Go in the TeamRedMiner folder you installed in Step 1. You'll find various files here, most commonly ones ending with '.bat' (Batch Files). You can choose to either edit one of these, or just create a fresh new batch file.<br><li>You can optionally delete any .bat files that you are not using, to clear some clutter.</li></p>
+                        <p>- If you choose to create a new .bat file, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
+                        <p>- At the end of the day, you're going to end up with a .bat file that should look something like this:</p>
                         <li>Nicehash/Ethermine:</li>
 						<code>
                             <div id="codeBlock">
@@ -144,14 +144,14 @@
                             teamredminer.exe -a <i>&lt;algorithm&gt;</i> -o <i>&lt;pool&gt;</i> -u salad -p <i>&lt;Your Prohashing ID&gt;</i><br>
 							</div>
 						</code>
-                        <br><p>First, the algorithm. There are 3 options:
+                        <br><p>- First, the algorithm. There are 3 options:
                             <ul>
                                 <li>Ethereum (5GB+ GPUs): <code>ethash</code></li>
                                 <li>KawPow (4GB+ GPUs): <code>kawpow</code></li>
                                 <li>Ethereum Classic (4GB+ GPUs): <code>etchash</code></li>
                             </ul>
                         </p>
-                        <p>Second, the pool: You'll want to use one of the following:</p>
+                        <p>- Second, the pool: You'll want to use one of the following:</p>
                         <ul>
                             <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethereum. If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
                             <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li><br>
@@ -160,15 +160,15 @@
 							<li><code>stratum+tcp://prohashing.com:3339</code> For Prohashing Ethash (Ethereum).<br>
 							<li><code>stratum+tcp://prohashing.com:3361</code> For Prohashing KawPow (Ravencoin).</li>
                         </ul><br>
-                        <p>Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for the Nicehash format, the <b>Ethermine</b> values for the Ethermine format, and the <b>Prohashing</b> values for the Prohashing format.</p>
+                        <p>- Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for the Nicehash format, the <b>Ethermine</b> values for the Ethermine format, and the <b>Prohashing</b> values for the Prohashing format.</p>
 						<p>Ensure that the end of your 'really long text' Prohashing ID has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
-                        <p>Here's an example of a completed ETH (Ethereum) file for Nicehash:</p>
+                        <p>- Here's an example of a completed ETH (Ethereum) file for Nicehash:</p>
                         <code>
                             <div id="codeBlock">
                                 teamredminer.exe -a ethash -o stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -u 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
                             </div>
                         </code>
-						<br><p>And here's an example of a completed RVN (Raven Coin) file for Prohashing:</p>
+						<br><p>- And here's an example of a completed RVN (Raven Coin) file for Prohashing:</p>
 						<code>
 							<div id="codeBlock">
 								teamredminer.exe -a kawpow -o stratum+tcp://prohashing.com:3361 -u Salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787<br>
