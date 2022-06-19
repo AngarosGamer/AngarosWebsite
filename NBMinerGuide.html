@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<!-- If you're seeing this, you're definitely a Russian spy stealing intelligence -->
+<!-- If you're seeing this, you're definitely a Russian Femboy spy stealing intelligence -->
 
 <html lang="en">
     <head>
@@ -44,14 +44,11 @@
         <hr>
         <button class="glow-on-hover" onclick="goBack()">&#8592; Go Back</button>
         <div id="maintext">
-            <br>
-            <br>
-
-            <h1>Use Salad in your command line with NBMiner</h1>
+            <br><br>
+            <h1>NBMiner guide</h1>
             <p>
-            Made by Angaros#1263 - Last update 03/05/2021 @23:06 UTC+2
+                Made by Angaros#1263 - Last update 19/06/2022 @19:57 UTC+1
             </p>
-
 
             <hr>
             <div class="wrap-collabsible"> 
@@ -61,9 +58,9 @@
                     <div class="content-inner">
                         <p>Running CLI allows you to:</p>
                         <ul>
-                            <li>Mine on GPU and CPU at the same time</li>
-                            <li>Most GPUs supported (from 3GB to any+)</li>
-                            <li>Temperature control</li>
+                            <li>Customise GPU usage</li>
+                            <li>Support for older GPUs</li>
+                            <li>Set max temperatures and start temperatures</li>
                             <li><i>Potentially</i> earn a bit more</li>
                         </ul>
                     </div>
@@ -95,10 +92,10 @@
                     <div class="content-inner">
                         <ul>
                             <li>Internet Connection</li>
-                            <li>A GPU with 3GB+ of VRAM</li>
+                            <li>A GPU with 4GB+ VRAM</li>
                             <li>500MB disk space</li>
-                            <li>Have installed Salad 0.5.6 - 0.5.8, found <a href="https://github.com/SaladTechnologies/salad-applications/releases" target="_blank">here</a>.</li>
-			    <li>To have mined once before (This is how you get the logs, So the rig and wallet ID)<li>
+                            <li>Have installed Salad (<a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> if you wish to use Nicehash or Ethermine pools)</li>
+                            <li>To have mined once before (This is to generate your Rig and wallet ID, shown in Salad's logs in later steps)</li>
                         </ul>
                     </div>
                 </div>
@@ -107,17 +104,19 @@
                 <label for="collapsible6" class="lbl-toggle">Step 1: Install NBMiner</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>You'll first want to install NBMiner, found <a id="link" href="https://github.com/NebuTech/NBMiner/releases" target="_blank">here</a>.  This will install NBMiner with the dependencies and required files.</p>
+                        <p>Start by installing the latest NBMiner version, found <a id="link" href="https://github.com/NebuTech/NBMiner/releases" target="_blank">here</a>.  This will install NBMiner miner. It is a rather small package so it shouldn't take too long. Extract it to your folder of choice.</p>
+						<p>You would also want to whitelist the folder that you place NBMiner in, just to ensure that your antivirus doesn't decide to interfere.<br><a href="https://support.salad.com/category/30-anti-virus/" target="_blank">Here</a> are some guides on how to whitelist a folder with most antiviruses.</p>
                     </div>
                 </div>
                 <hr>
-                <input id="collapsible8" class="toggle" type="checkbox"> 
-                <label for="collapsible8" class="lbl-toggle">Step 2: Find your pool and worker ID</label>
+                <input id="collapsible7" class="toggle" type="checkbox"> 
+                <label for="collapsible7" class="lbl-toggle">Step 2: Find your pool and worker ID</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Here is <a href="https://support.salad.io/hc/en-us/articles/360042215512-How-To-Find-Your-Salad-Log-Files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
-                        <p>Salad version 0.5.6 - 0.5.8 will be required to do this. You can find theses here, <a href="https://github.com/SaladTechnologies/salad-applications/releases" target="_blank">Salad github.</a> </p>
-			<p>It should look something like this:</p>
+                        <p>Here is <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
+                        <p>Note that Salad 1.0 no longer gives the required IDs to mine with Nicehash and Ethermine in the logs - If you wish to use either of these pools, you'll have to use Salad <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> to get the IDs required for these pools.</p>
+						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. T-Rex), opening the latest log inside of said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
+                        <p>It should look something like this:</p>
                         <div class ="row">
                             <div class="column"><img src="images/RigIDs.png" alt="Snow" style="width:100%"></div>
                             <div class="column"><img src="images/MinerIDs.png" alt="Snow" style="width:100%"></div>
@@ -126,54 +125,84 @@
                     </div>
                 </div>
                 <hr>
-                <input id="collapsible9" class="toggle" type="checkbox"> 
-                <label for="collapsible9" class="lbl-toggle">Step 3: Making your Salad CLI</label>
+                <input id="collapsible8" class="toggle" type="checkbox"> 
+                <label for="collapsible8" class="lbl-toggle">Step 3: Making your Salad CLI</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Go in the NBMiner folder you installed in Step 1. You should find multiple files named <code>start_{crypto}.bat</code>. You'll want to open any of them with notepad, or a code editor.</p>
-                        <p>Should it not exist, you can also just create one.</p>
-                        <p>We will need to edit the <code>start</code> file, by adding the correct information:</p>
-                        <code>
+                        <p>Go in the NBMiner folder you installed in Step 1. You'll find various files here, most commonly ones ending with '.bat' (Batch Files). You can choose to either edit one of these, or just create a fresh new batch file.<br><li>You can optionally delete any .bat files that you are not using, to clear some clutter.</li></p>
+                        <p>If you choose to create a new .bat file, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
+                        <p>At the end of the day, you're going to end up with a .bat file that should look something like this:</p>
+                        <li>Nicehash/Ethermine:</li>
+						<code>
                             <div id="codeBlock">
-                            @echo off<br>
-                            nbminer.exe -&lt;algo&gt; -o &lt;pool&gt;:&lt;port&gt; -u &lt;walletAddress&gt;.&lt;rigId&gt;<br>
+                            nbminer --algo <i>&lt;algorithm&gt;</i> --url <i>&lt;pool&gt;</i> --user <i>&lt;Wallet Address&gt;</i>.<i>&lt;Rig ID&gt;</i><br>
                             pause
                             </div>
                         </code>
-                        <p>First, the algo:</p>
+						<br><li>Prohashing:</li>
+						<code>
+							<div id="codeBlock">
+							nbminer --algo <i>&lt;algorithm&gt;</i> --url <i>&lt;pool&gt;</i> --user salad -pass <i>&lt;Your Prohashing ID&gt;</i><br>
+							pause
+							</div>
+						</code>
+                        <br><p>First, the algorithm. There are 3 options:
+                            <ul>
+                                <li>Ethereum (5GB+ GPUs): <code>ethash</code></li>
+                                <li>KawPow (4GB+ GPUs): <code>kawpow</code></li>
+                                <li>Ethereum Classic (4GB+ GPUs): <code>etchash</code></li>
+                            </ul>
+                        </p>
+                        <p>Second, the pool: You'll want to use one of the following:</p>
                         <ul>
-                            <li>If you're on a 3GB - 4GB VRAM GPU, choose <code>-a beamv3</code></li>
-							<li>If you're on a 3GB - 4GB VRAM GPU, choose <code>-a etchash</code></li>
-                            <li>If you're on a 6GB+ VRAM GPU, choose <code>-a ethash</code></li>
-                        </ul>
-                        <p>Second, the pool and port: You'll want to use one of these two:</p>
-                        <ul>
-                            <li>If you have a 3GB - 4GB VRAM GPU: <code>stratum+tcp://beamv3.eu.nicehash.com:3387</code> (You can change locations: eu, usa, eu-west, eu-north, usa-west, usa-east)</li>
-                            <li>If you have a 3GB - 4GB VRAM GPU: <code>ethproxy+tcp://eu1-etc.ethermine.org:4444</code> (You can change locations: eu1, us1, asia1, eu2, us2, asia2)</li>
-							<li>If you have a 6GB+ VRAM GPU: <code>ethproxy+tcp://eu1.ethermine.org:4444</code> (You can change locations: eu1, us1, asia1, eu2, us2, asia2)</li>
-                        </ul>
-                        <p>Third, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>nicehash</b> values for wallet address and rig ID.</p>
-                        <p>Here's an example of a completed 4GB+ VRAM GPU file:</p>
+                            <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethereum. If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
+                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li><br>
+                            <li><code>eu1.ethermine.org:4444</code> For Ethermine Ethereum. You can optionally change locations to the one closest to you: eu1, us1, us2, asia1, asia2.</li>
+							<li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li><br>
+							<li><code>stratum+tcp://prohashing.com:3339</code> For Prohashing Ethash (Ethereum).<br>
+							<li><code>stratum+tcp://prohashing.com:3361</code> For Prohashing KawPow (Ravencoin).</li>
+                        </ul><br>
+                        <p>Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for the Nicehash format, the <b>Ethermine</b> values for the Ethermine format, and the <b>Prohashing</b> values for the Prohashing format.</p>
+						<p>Ensure that the end of your 'really long text' Prohashing ID has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
+                        <p>Here's an example of a completed ETH (Ethereum) file for Nicehash:</p>
                         <code>
                             <div id="codeBlock">
-                                @echo off<br>
-                                nbminer.exe -a ethash -o ethproxy+tcp://eu1.ethermine.org:4444 -u 0x6ff85749ffac2d3a36efa2bc916305433fa93731.p36pcuzwyhvd2fx
+                                nbminer --algo ethash --url stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
                                 pause
                             </div>
                         </code>
+						<br><p>And here's an example of a completed RVN (Ravencoin) file for Prohashing:</p>
+						<code>
+							<div id="codeBlock">
+								nbminer --algo kawpow --url stratum+tcp://prohashing.com:3361 --user salad --password o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787<br>
+								pause
+							</div>
+						</code>
                     </div>
                 </div>
                 <hr>
-                <input id="collapsible10" class="toggle" type="checkbox"> 
-                <label for="collapsible10" class="lbl-toggle">Step 4: NBMiner particularity</label>
+                <input id="collapsible9" class="toggle" type="checkbox"> 
+                <label for="collapsible9" class="lbl-toggle">Step 4: For LHR users!</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>NBMiner has an extra way of showing your stats than the CMD window, contrary to many other miners.</p>
-                        <p>If you take a look in the NBMiner folder, you should see a <code>open_web_monitor</code> file.</p>
-                        <p>Double-cliking on this should bring you to a local host website with all of your miner info.</p>
-                        <img src="images/NBMinerWebsite.png" alt="Snow" style="width:100%">
+                        <p>You're in luck NBMiner automatically unlocks LHR for any applicable LHR GPUs - All you need to do is run NBMiner as administrator.<br>In case if you're worried about potential security issues by doing so, NBMiner is a trusted miner among the mining community, with tens of thousands of users. Salad even plans to add this exact feature officially to Salad 1.0!</p><br>
+						<p>To do so, you'd want to right click on <code>nbminer.exe</code>, then click on Properties.</p>
+						<p>You next click on the 'Compatibility' tab at the top.</p>
+						<p>Near the bottom, tick 'Run this program as administrator'.</p>
+						<p>Hit apply, then run your <code>start.bat</code> file, and NBMiner should now start as administrator and automatically 100% unlock your LHR GPU!</p>
                     </div>
                 </div>
+            <hr>
+            <input id="collapsible10" class="toggle" type="checkbox"> 
+            <label for="collapsible10" class="lbl-toggle">Step 5: NBMiner particularity</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <p>NBMiner has an extra way of showing your stats than the CMD window, contrary to many other miners.</p>
+                    <p>If you take a look in the NBMiner folder, you should see a <code>open_web_monitor</code> file.</p>
+                    <p>Double-cliking on this should bring you to a local host website with all of your miner info like hashrate, shares and gpu stats.</p>
+                    <img src="images/NBMinerWebsite.png" alt="Snow" style="width:100%">
+                </div>
+            </div>
                 <hr>
                 <input id="collapsible11" class="toggle" type="checkbox"> 
                 <label for="collapsible11" class="lbl-toggle">Some additional .bat commands</label>
@@ -181,11 +210,12 @@
                     <div class="content-inner">
                         <p>Here's some pretty useful NBMiner commands you can use:</p>
                         <ul>
-                            <li><code>-i</code> : From 0 to 100, changes intensity. Lower means lower usage</li>
-                            <li><code>--temperature-limit</code> Set temperature limit of GPU in Celsius. If it exceeds, stop the GPU for 10 seconds and continue.</li>
-                            <li><code>--fee</code> Change devfee in percentage, [0-5]. Set to '0' to turn off devfee with lower hashrate. Otherwise, devfee = max(set_value, def_value).</li>
+                            <li><code>--intensity</code> : Change usage value, from 1 (lowest) to 100 (highest). Default is auto (Recommended)</li>
+                            <li><code>--devices</code> : A comma separated list of which GPUs to use. Device IDs start counting from 0.</li>
+                            <li><code>--temperature-limit x</code> : Stops the miner when that temperature (x) is reached.</li>
+                            <li><code>--temperature-start y</code> : Starts the miner back up once GPU temperature has cooled down to (y).</li>
                         </ul>
-                        <p>There are more to be found <a id="link" href="https://github.com/NebuTech/NBMiner#cmd-options" target="_blank">here</a> for aditional customization.</p>
+                        <p>The full in-depth list of NBMiner arguments can be found <a id="link" href="https://github.com/NebuTech/NBMiner#cmd-options" target="_blank">Here</a>.</p>
                     </div>
                 </div>
                 <hr>
@@ -193,10 +223,10 @@
                 <label for="collapsible12" class="lbl-toggle">Using your Salad CLI</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Save the <code>start.bat</code> file, close it, and run it. It should work if everything was set up properly.</p>
+                        <p>Now just save that .bat file, close it, and run it. It should work if everything was set up properly.</p>
                         <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you follwed all steps and retry once the issue is fixed.</p>
                         <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
-                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract.</p>
+                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
                     </div>
                 </div>
                 <hr>
