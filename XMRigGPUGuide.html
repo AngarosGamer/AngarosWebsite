@@ -175,15 +175,20 @@
                         </ul>
 						<p>- Third, the algorithm. If you wish to use KawPow, use <code>-a kawpow</code>. If you wish to use RandomX, use <code>-a randomx</code>
 						<br>Though currently KawPow is currently more profitable than RandomX, so you'd likely wish to choose that.</p>
-                        <p>- Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>nicehash</b> values for wallet address and rig ID.</p>
-                        <p>- Here's an example of a completed NVIDIA file, using Nicehash KawPow:</p>
-                        <code>
-                            <div id="codeBlock">
-                                @echo off<br>
-                                xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+ssl://kawpow.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a kawpow -k --nicehash<br>
-                                pause
-                            </div>
-                        </code>
+                        <p>- Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for 'Wallet Address' and 'Rig ID'.
+						<br>For Prohashing, you'll need to use your 'long string of text' Prohashing ID. If the algorithm indicator at the end of the ID (<code>,a=</code>) doesn't work, try removing the it. It should work without it.</p>
+                        <p>- Here's an example of a completed file for a NVIDIA GPU, using Nicehash KawPow:</p>
+                        <code><div id="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+ssl://kawpow.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a kawpow -k --nicehash<br>
+                            pause
+                        </div></code><br>
+						<p>And here's an example of a completed file for an AMD GPU, using Prohashing RandomX:
+						<code><div id="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --opencl --donate-level=1 -o stratum+tcp://prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
+                            pause
+						</div></code>
                     </div>
                 </div>
                 <hr>
