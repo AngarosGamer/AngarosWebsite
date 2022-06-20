@@ -24,15 +24,21 @@ body {
 input {
   background-color: #c69c6c;
   margin-left: 5px;
+  width: 40vh;
+  height: 10vh;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 300%;
 }
 label {
-  margin-left: 5px;
+  margin-left: 10px;
   color: #c69c6c;
+  font-size: 3vh;
 }
-#profLabel {
+#hash {
   background-color: #c69c6c;
   margin-bottom: 5px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 /* Header Formatting - 3 different for each HTML page variant */
