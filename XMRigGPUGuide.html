@@ -49,7 +49,7 @@
 
             <h1>Use Salad in your command line with XMRig GPU</h1>
             <p>
-            Made by Angaros#1263 - Last update 12/04/2021 @10:37 UTC+2
+            Made by Angaros#1263 - Last update 19/06/2022 @10:45 UTC+1
             </p>
 
 
@@ -61,9 +61,10 @@
                     <div class="content-inner">
                         <p>Running CLI allows you to:</p>
                         <ul>
-                            <li>Mine on GPU and CPU at the same time</li>
-                            <li>Mine on GPUs with 4GB of VRAM or less</li>
-                            <li><i>Potentially</i> earn a bit more</li>
+							<li>Customise GPU usage</li>
+                            <li>Mine on CPU and GPU at the same time</li>
+                            <li>Have access to additional miner arguments</li>
+                            <li><i>Potentially</i> earn a bit more by using more advanced miner arguments than what Salad uses</li>
                         </ul>
                     </div>
                 </div>
@@ -97,8 +98,8 @@
                             <li>Internet Connection</li>
                             <li>A GPU with 4GB+ of VRAM (although T-REX, Phoenix, NBminer or GMiner are recommended for 6GB+ GPUs)</li>
                             <li>500MB disk space</li>
-                            <li>Have installed Salad 0.5.6, found <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">here</a>.</li>
-                            <li>To have mined once before (This is how you get the logs, So the rig and wallet ID)<li>
+                            <li>Have installed Salad (<a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> if you wish to use Nicehash's pool, rather than Prohashing.)</li>
+                            <li>To have mined once before (This is to generate your Rig and wallet ID, shown in Salad's logs in later steps)
                         </ul>
                     </div>
                 </div>
@@ -107,7 +108,7 @@
                 <label for="collapsible6" class="lbl-toggle">Step 1: Install XMRig</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>This is going to be a multi-stepped install, due to the requirements GPUs have. First, install the latest XMRig gcc-win64.zip version, found <a id="link" href="https://github.com/xmrig/xmrig/releases">here</a>.  This will install the base XMRig miner with the dependencies and required files.</p>
+                        <p>This is going to be a multi-step install, due to the requirements GPUs have. First, install the latest XMRig gcc-win64.zip version, found <a id="link" href="https://github.com/xmrig/xmrig/releases">here</a>.  This will install the base XMRig miner with the dependencies and required files.</p>
                     </div>
                 </div>
                 <hr>
@@ -127,8 +128,9 @@
                 <label for="collapsible8" class="lbl-toggle">Step 3: Find your pool and worker ID</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Here is <a href="https://support.salad.io/hc/en-us/articles/360042215512-How-To-Find-Your-Salad-Log-Files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
-                        <p>Salad version 0.5.6 will be required to do this. You can find theses here, <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">Salad github.</a> </p>
+                        <p>Here is <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
+                        <p>Note that Salad 1.0 no longer gives the required IDs to mine with Nicehash, so you'll have to use Salad <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> to get the IDs required for these pools.</p>
+						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. T-Rex), opening the latest log inside of said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
                         <p>It should look something like this:</p>
                         <div class ="row">
                             <div class="column"><img src="images/RigIDs.png" alt="Snow" style="width:100%"></div>
@@ -142,36 +144,52 @@
                 <label for="collapsible9" class="lbl-toggle">Step 4: Making your Salad CLI</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Go in the XMRig folder you installed in Step 1. You'll find a file named <code>start.bat</code>. You'll want to open it with notepad, or a code editor.</p>
+                        <p>- Go in the XMRig folder you installed in Step 1. You'll find a file named <code>start.bat</code>. You'll want to open it with notepad, or a code editor.</p>
                         <p>Should it not exist, you can also just create it.</p>
-                        <p>We will need to edit the <code>start</code> file, by adding the correct information:</p>
-                        <code>
-                            <div id="codeBlock">
+                        <p>- We will need to edit the <code>start.bat</code> file, by adding the correct information:</p>
+                        <li>Nicehash:</li>
+						<code><div id="codeBlock">
                             @echo off<br>
-                            xmrig.exe --no-cpu --&lt;gpu_type&gt; --donate-level=1 -o &lt;pool&gt;:&lt;pool_port&gt; -u &lt;walletAddress&gt;.&lt;rigId&gt; -k -a kawpow --nicehash<br>
+                            xmrig.exe --no-cpu --<i>&lt;gpu_type&gt;</i> --donate-level=1 -o <i>&lt;pool&gt;</i> -u <i>&lt;Wallet Address&gt;</i>.<i>&lt;Rig ID&gt;</i> -a <i>&lt;algorithm&gt;</i> -k --nicehash<br>
                             pause
-                            </div>
-                        </code>
-                        <p>First, the GPU type:</p>
+                            </div></code><br>
+						<li>Prohashing:</li>
+						<code><div id="codeBlock">
+							@echo off<br>
+							xmrig.exe --no-cpu --<i>&lt;gpu_type&gt;</i> --donate-level=1 -o <i>&lt;pool&gt;</i> -u salad -p <i>&lt;That long string of text&gt;</i> -a <i>&lt;algorithm&gt;</i> -k<br>
+							pause
+							</div></code>
+							
+                        <p>- First, the GPU type:</p>
                         <ul>
                             <li>If you're on NVIDIA, type <code>--cuda</code></li>
                             <li>If you're on AMD, type <code>--opencl</code></li>
-                        </ul>
-                        <p>Second, the pool and port: You'll want to use one of these two:</p>
+                        </ul><br>
+                        <p>- Second, the pool and port: You'll want to use one of the following:</p>
                         <ul>
-                            <li><code>stratum+tcp://kawpow.usa.nicehash.com:3385</code> (US pool)</li>
-                            <li><code>stratum+tcp://kawpow.eu.nicehash.com:3385</code> (Europe pool)</li>
+                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - Nicehash KawPow. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
+							<li><code>stratum+tcp://prohashing.com:3361</code> - Prohashing KawPow. Be sure to have <code>,a=kawpow</code> at the end of your 'long string of text'.</li>
+							<br>
+							<li><code>stratum+ssl://randomxmonero.auto.nicehash.com:443</code> - Nicehash RandomX. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://randomxmonero.auto.nicehash.com:9200</code></li>
+							<li><code>stratum+tcp://prohashing.com:3359</code> - Prohashing RandomX. Be sure to have <code>,a=randomx</code> at the end of your 'long string of text'.</li><br>
                         </ul>
-                        <p>Third, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>nicehash</b> values for wallet address and rig ID.</p>
-                        <p>Lastly, since we are uing NiceHash pools, add <code>--nicehash</code> at the end of that string</p>
-                        <p>Here's an example of a completed NVIDIA file:</p>
-                        <code>
-                            <div id="codeBlock">
-                                @echo off<br>
-                                xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+tcp://kawpow.eu.nicehash.com:3385 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -k -a kawpow --nicehash<br>
-                                pause
-                            </div>
-                        </code>
+						<p>- Third, the algorithm. If you wish to use KawPow, use <code>-a kawpow</code>. If you wish to use RandomX, use <code>-a randomx</code>
+						<br>Though currently KawPow is currently more profitable than RandomX, so you'd likely wish to choose that.</p>
+                        <p>- Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for 'Wallet Address' and 'Rig ID'.
+						<br>For Prohashing, you'll need to use your 'long string of text' Prohashing ID. If the algorithm indicator at the end of the ID (<code>,a=</code>) doesn't work, try removing it. It should work without it.</p>
+						
+                        <p>- Here's an example of a completed file for a NVIDIA GPU, using Nicehash KawPow:</p>
+                        <code><div id="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+ssl://kawpow.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a kawpow -k --nicehash<br>
+                            pause
+                        </div></code><br>
+						<p>- And here's an example of a completed file for an AMD GPU, using Prohashing RandomX:
+						<code><div id="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --opencl --donate-level=1 -o stratum+tcp://prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
+                            pause
+						</div></code>
                     </div>
                 </div>
                 <hr>
@@ -181,10 +199,12 @@
                     <div class="content-inner">
                         <p>Here's some pretty useful XMRig commands you can use:</p>
                         <ul>
-                            <li><code>--print-time</code> : if you want to print (show) hashrate at a faster rate, "n" being in seconds</li>
-                            <li><code>--background</code> : will run XMRig in the background. Note: Will not appear in the System Tray, you'll have to close it via Task Manager</li>
+                            <li><code>--print-time=n</code> : If you want to print (update) hashrate at a faster rate, 'n' being in seconds</li>
+                            <li><code>--background</code> : Will run XMRig in the background. Note: Will not appear in the System Tray, you'll have to close it via Task Manager</li>
+							<li><code>--pause-on-battery</code> : For those laptop users out there, this will pause mining when your laptop is running on battery life, and resume when it is plugged in.
+							<li><code>--log-file=n</code> : Where 'n' is the name of the log file.
                         </ul>
-                        <p>There are more to be found <a id="link" href="https://xmrig.com/docs/miner/command-line-options" target="_blank">here</a> for aditional customization.</p>
+                        <p>There are more miner arguments to be found <a id="link" href="https://xmrig.com/docs/miner/command-line-options" target="_blank">here</a> for aditional customisation.</p>
                     </div>
                 </div>
                 <hr>
@@ -195,7 +215,7 @@
                         <p>Save the <code>start.bat</code> file, close it, and run it. It should work if everything was set up properly.</p>
                         <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you follwed all steps and retry once the issue is fixed.</p>
                         <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
-                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract.</p>
+                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
                     </div>
                 </div>
                 <hr>
