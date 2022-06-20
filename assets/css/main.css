@@ -14,6 +14,27 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+.box {
+  width: 500;
+  height: 500;
+  background-color:#303136;
+  border-radius: 5px;
+  margin-top: 3vh;
+}
+input {
+  background-color: #c69c6c;
+  margin-left: 5px;
+}
+label {
+  margin-left: 5px;
+  color: #c69c6c;
+}
+#profLabel {
+  background-color: #c69c6c;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
 /* Header Formatting - 3 different for each HTML page variant */
 .container {
   width: 100%;
