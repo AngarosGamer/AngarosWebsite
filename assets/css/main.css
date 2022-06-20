@@ -15,29 +15,26 @@ body {
   background-size: 100% 100%;
 }
 .box {
-  width: 500;
-  height: 500;
   background-color:#303136;
   border-radius: 5px;
-  margin-top: 3vh;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 input {
   background-color: #c69c6c;
-  margin-left: 5px;
-  width: 40vh;
-  height: 10vh;
   border-radius: 10px;
-  margin-bottom: 10px;
-  font-size: 300%;
+  font-size: 20px;
+  padding: 5px;
 }
 label {
   color: #c69c6c;
-  font-size: 3vh;
 }
 #hash {
   background-color: #c69c6c;
-  margin-bottom: 5px;
-  margin-left: 10px;
 }
 
 /* Header Formatting - 3 different for each HTML page variant */
