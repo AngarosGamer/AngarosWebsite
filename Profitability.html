@@ -5,10 +5,10 @@
 <html lang="en">
     <head>
         <title>Angaros - T-REX</title>
-        <meta property="og:type" content="angaros.vercel.app/T-REX.html">
-        <meta property="og:title" content="Angaros - T-REX guide!" />
-        <meta property="og:description" content="Find the T-REX guide to Salad CLI mining!" />
-        <meta property="og:url" content="https://angaros.vercel.app/T-REX.html" />
+        <meta property="og:type" content="angaros.vercel.app/Profitability.html">
+        <meta property="og:title" content="Plerion - Profitability Calculator!" />
+        <meta property="og:description" content="Calculate how much you will earn with CLI!" />
+        <meta property="og:url" content="https://angaros.vercel.app/Profitability.html" />
         <meta property="og:image" content="images/WebpageIcon.jpg" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -52,9 +52,28 @@
 
             <hr>
             <div class="box">
+<<<<<<< Updated upstream
                 <label for="hash">Hashrate (MH/s):</label>
                 <input type="text" id="hash" name="factor[eth_hr]" placeholder="eg: 45">
                 <input type="submit" value="Submit" onclick="submitForm()">
+=======
+               
+                    <br>
+                    <label for="hash">Hashrate(MH):</label>
+                    <input type="text" id="hash" name="factor[eth_hr]" placeholder="eg: 45"><br><br>
+                    <br>
+                    <input type="submit" value="Submit" onclick="submitForm()">
+
+                <script>
+                    function submitForm() {
+                      var urlParam = "eth=true&factor[eth_hr]="+document.getElementById("hash").value+"&factor[eth_p]=0&factor[e4g_hr]=0&factor[e4g_p]=0&factor[zh_hr]=0&factor[zh_p]=0&factor[cnh_hr]=0&factor[cnh_p]=0&factor[cng_hr]=0&factor[cng_p]=0&factor[cnf_hr]=0&factor[cnf_p]=0&factor[cx_hr]=0&factor[cx_p]=0&factor[eqa_hr]=0&factor[eqa_p]=0&factor[cc_hr]=0&factor[cc_p]=0&factor[cr29_hr]=0&factor[cr29_p]=0&factor[ct31_hr]=0&factor[ct31_p]=0&factor[ct32_hr]=0&factor[ct32_p]=0&factor[eqb_hr]=0&factor[eqb_p]=0&factor[rmx_hr]=0&factor[rmx_p]=0&factor[ns_hr]=0&factor[ns_p]=0&factor[al_hr]=0&factor[al_p]=0&factor[ops_hr]=0&factor[ops_p]=0&factor[eqz_hr]=0&factor[eqz_p]=0&factor[zlh_hr]=0&factor[zlh_p]=0&factor[kpw_hr]=0&factor[kpw_p]=0&factor[ppw_hr]=0&factor[ppw_p]=0&factor[x25x_hr]=0&factor[x25x_p]=0&factor[fpw_hr]=0&factor[fpw_p]=0&factor[vh_hr]=0&factor[vh_p]=0&factor[cost]=0.0&factor[cost_currency]=USD&sort=Difficulty&volume=0&revenue=current&factor[exchanges][]=&factor[exchanges][]=binance&dataset=Main&commit=Calculate";
+                      var URL = "https://whattomine.com/coins";
+                      var encodedUrl = URL+"?"+encodeURI( urlParam );
+                      window.location.href = encodedUrl;
+                    }
+                    
+                    </script>
+>>>>>>> Stashed changes
             </div>
         </div>
       </div>
