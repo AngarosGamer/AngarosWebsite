@@ -33,10 +33,17 @@ input {
 label {
   color: #c69c6c;
 }
+select {
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px;
+}
 #hash {
   background-color: #c69c6c;
 }
-
+#algo {
+  background-color: #c69c6c;
+}
 /* Header Formatting - 3 different for each HTML page variant */
 .container {
   width: 100%;

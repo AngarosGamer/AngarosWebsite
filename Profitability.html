@@ -5,10 +5,10 @@
 <html lang="en">
     <head>
         <title>Angaros - T-REX</title>
-        <meta property="og:type" content="angaros.vercel.app/T-REX.html">
-        <meta property="og:title" content="Angaros - T-REX guide!" />
-        <meta property="og:description" content="Find the T-REX guide to Salad CLI mining!" />
-        <meta property="og:url" content="https://angaros.vercel.app/T-REX.html" />
+        <meta property="og:type" content="angaros.vercel.app/Profitability.html">
+        <meta property="og:title" content="Plerion - Profitability Calculator!" />
+        <meta property="og:description" content="Calculate how much you will earn with CLI!" />
+        <meta property="og:url" content="https://angaros.vercel.app/Profitability.html" />
         <meta property="og:image" content="images/WebpageIcon.jpg" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -52,6 +52,13 @@
 
             <hr>
             <div class="box">
+                <label for="algo">Algorithm:</label>
+                <select name="Algorithm" id="algo">
+                  <option value="ethash">ethash</option>
+                  <option value="etchash">etchash</option>
+                  <option value="KawPow">KawPow</option>
+                </select>
+                <br>
                 <label for="hash">Hashrate (MH/s):</label>
                 <input type="text" id="hash" name="factor[eth_hr]" placeholder="eg: 45">
                 <input type="submit" value="Submit" onclick="submitForm()">
