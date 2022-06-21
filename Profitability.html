@@ -52,6 +52,13 @@
 
             <hr>
             <div class="box">
+                <label for="algo">Algorithm:</label>
+                <select name="Algorithm" id="algo">
+                  <option value="ethash">ethash</option>
+                  <option value="etchash">etchash</option>
+                  <option value="KawPow">KawPow</option>
+                </select>
+                <br>
                 <label for="hash">Hashrate (MH/s):</label>
                 <input type="text" id="hash" name="factor[eth_hr]" placeholder="eg: 45">
                 <input type="submit" value="Submit" onclick="submitForm()">
