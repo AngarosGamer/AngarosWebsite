@@ -179,13 +179,19 @@
                         <p>Here's some pretty useful XMRig commands you can use:</p>
                         <ul>
                             <li><code>--threads=N</code> : Limits CPU usage using threads (If you have 8 threads, setting N to 4 will mean  the miner can only use 4 out of 8 threads; effectively 50% usage)</li>
-                            <li><code>--print-time</code> : If you want to print (update) hashrate at a faster rate, "n" being in seconds</li>
+                            <li><code>--print-time=n</code> : If you want to print (update) hashrate at a faster rate, "n" being in seconds</li>
                             <li><code>-k</code> : (Keepalive) Will send packets to pool to prevent timeout</li>
                             <li><code>--background</code> : Will run XMRig in the background. Note: Will not appear in the System Tray, you'll have to close it via Task Manager</li>
 							<li><code>--cpu-priority=n</code> : Where 'n' is a number between 0 - 5, determining the miner's process priority. 0 is for idle, 2 is normal priority (Default), and 5 is the highest priority. Usually leaving this as default is good enough, but if you don't mind your PC being slower, you can manually set this higher.</li>
 							<li></li>
                         </ul>
                         <p>There are more to be found <a id="link" href="https://xmrig.com/docs/miner/command-line-options" target="_blank">here</a> for aditional customisation.</p>
+                        <p>- Here's an example of a completed file, using Nicehash's pool with extra commands:</p>
+                        <code><div id="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --donate-level=1 -o stratum+ssl://randomxmonero.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a randomx -k --nicehash --print-time=5 -k<br>
+                            pause
+                        </div></code>
                     </div>
                 </div>
                 <hr>
