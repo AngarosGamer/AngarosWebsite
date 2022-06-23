@@ -210,12 +210,19 @@
                     <div class="content-inner">
                         <p>Here's some pretty useful GMiner commands you can use:</p>
                         <ul>
-                            <li><code>--intensity</code> : Change usage value, from 1 (lowest) to 100 (highest). Default is auto (Recommended)</li>
+                            <li><code>--intensity n</code> : Change usage value "n", from 1 (lowest) to 100 (highest). Default is auto (Recommended)</li>
                             <li><code>--devices</code> : A comma separated list of which GPUs to use. Device IDs start counting from 0.</li>
                             <li><code>--templimit x</code> : Stops the miner when that temperature (x) on the gpu core is reached it will automatically start when the gpu is cooled down.</li>
                             <li><code>--templimit_mem y</code> : Stops the miner when that temperature (y) on the vram is reached it will automatically start when the gpu is cooled down.</li>
                         </ul>
                         <p>The full in-depth list of GMiner miner arguments can be found <a id="link" href="https://github.com/develsoftware/GMinerRelease#miner-options" target="_blank">Here</a>.</p>
+                        <p>Here's an example of a completed ETH (Ethereum) file for Nicehash with extra commands:</p>
+                        <code>
+                            <div id="codeBlock">
+                                miner.exe --algo ethash --server stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --templimit 60 --intensity 70<br>
+                                pause
+                            </div>
+                        </code>
                     </div>
                 </div>
                 <hr>

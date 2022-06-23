@@ -205,6 +205,12 @@
 							<li><code>--log-file=n</code> : Where 'n' is the name of the log file.
                         </ul>
                         <p>There are more miner arguments to be found <a id="link" href="https://xmrig.com/docs/miner/command-line-options" target="_blank">here</a> for aditional customisation.</p>
+                        <p>- Here's an example of a completed file for a NVIDIA GPU, using Nicehash KawPow with extra commands:</p>
+                        <code><div id="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+ssl://kawpow.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a kawpow -k --nicehash --print-time=5 --background<br>
+                            pause
+                        </div></code>
                     </div>
                 </div>
                 <hr>

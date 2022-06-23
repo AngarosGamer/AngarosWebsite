@@ -212,12 +212,19 @@
                     <div class="content-inner">
                         <p>Here's some pretty useful NBMiner commands you can use:</p>
                         <ul>
-                            <li><code>--intensity</code> : Change usage value, from 1 (lowest) to 100 (highest). Default is auto (Recommended)</li>
+                            <li><code>--intensity n</code> : Change usage value "n", from 1 (lowest) to 100 (highest). Default is auto (Recommended)</li>
                             <li><code>--devices</code> : A comma separated list of which GPUs to use. Device IDs start counting from 0.</li>
                             <li><code>--temperature-limit x</code> : Stops the miner when that temperature (x) is reached.</li>
                             <li><code>--temperature-start y</code> : Starts the miner back up once GPU temperature has cooled down to (y).</li>
                         </ul>
                         <p>The full in-depth list of NBMiner arguments can be found <a id="link" href="https://github.com/NebuTech/NBMiner#cmd-options" target="_blank">Here</a>.</p>
+                        <p>Here's an example of a completed ETH (Ethereum) file for Nicehash with extra commands:</p>
+                        <code>
+                            <div id="codeBlock">
+                                nbminer --algo ethash --url stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --temperature-limit 70 --temperature-start 55<br>
+                                pause
+                            </div>
+                        </code>
                     </div>
                 </div>
                 <hr>
