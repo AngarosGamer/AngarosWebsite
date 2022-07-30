@@ -21,6 +21,21 @@ function submitForm() {
     var URL = "https://whattomine.com/coins";
     var encodedUrl = URL + "?" + encodeURI(urlParam);
     window.location.href = encodedUrl;
+  } else if(selectedValue == "Autokylos") {
+    var urlParam = "eth=false&factor[eth_hr]=0&factor[eth_p]=0&factor[e4g_hr]=0&factor[e4g_p]=0&factor[zh_hr]=0&factor[zh_p]=0&factor[cnh_hr]=0&factor[cnh_p]=0&factor[cng_hr]=0&factor[cng_p]=0&factor[cnf_hr]=0&factor[cnf_p]=0&factor[cx_hr]=0&factor[cx_p]=0&factor[eqa_hr]=0&factor[eqa_p]=0&factor[cc_hr]=0&factor[cc_p]=0&factor[cr29_hr]=0&factor[cr29_p]=0&factor[ct31_hr]=0&factor[ct31_p]=0&factor[ct32_hr]=0&factor[ct32_p]=0&factor[eqb_hr]=0&factor[eqb_p]=0&factor[rmx_hr]=0&factor[rmx_p]=0&factor[ns_hr]=0&factor[ns_p]=0&al=true&factor[al_hr]=" + document.getElementById("hash").value + "&factor[al_p]=0&factor[ops_hr]=0&factor[ops_p]=0&factor[eqz_hr]=0&factor[eqz_p]=0&factor[zlh_hr]=0&factor[zlh_p]=0&kpw=false&factor[kpw_hr]=0&factor[kpw_p]=0&factor[ppw_hr]=0&factor[ppw_p]=0&factor[x25x_hr]=0&factor[x25x_p]=0&factor[fpw_hr]=0&factor[fpw_p]=0&factor[vh_hr]=0&factor[vh_p]=0&factor[cost]=0.0&factor[cost_currency]=USD&sort=Difficulty&volume=0&revenue=current&factor[exchanges][]=&factor[exchanges][]=binance&dataset=Main&commit=Calculate";
+    var URL = "https://whattomine.com/coins";
+    var encodedUrl = URL + "?" + encodeURI(urlParam);
+    window.location.href = encodedUrl;
+  } else if(selectedValue == "beam") {
+    var urlParam = "eth=false&factor[eth_hr]=0&factor[eth_p]=0&factor[e4g_hr]=0&factor[e4g_p]=0&factor[zh_hr]=0&factor[zh_p]=0&factor[cnh_hr]=0&factor[cnh_p]=0&factor[cng_hr]=0&factor[cng_p]=0&factor[cnf_hr]=0&factor[cnf_p]=0&factor[cx_hr]=0&factor[cx_p]=0&factor[eqa_hr]=0&factor[eqa_p]=0&factor[cc_hr]=0&factor[cc_p]=0&factor[cr29_hr]=0&factor[cr29_p]=0&factor[ct31_hr]=0&factor[ct31_p]=0&factor[ct32_hr]=0&factor[ct32_p]=0&eqb=true&factor[eqb_hr]=" + document.getElementById("hash").value + "&factor[eqb_p]=0&factor[rmx_hr]=0&factor[rmx_p]=0&factor[ns_hr]=0&factor[ns_p]=0&factor[al_hr]=0&factor[al_p]=0&factor[ops_hr]=0&factor[ops_p]=0&factor[eqz_hr]=0&factor[eqz_p]=0&factor[zlh_hr]=0&factor[zlh_p]=0&kpw=false&factor[kpw_hr]=0&factor[kpw_p]=0&factor[ppw_hr]=0&factor[ppw_p]=0&factor[x25x_hr]=0&factor[x25x_p]=0&factor[fpw_hr]=0&factor[fpw_p]=0&factor[vh_hr]=0&factor[vh_p]=0&factor[cost]=0.0&factor[cost_currency]=USD&sort=Difficulty&volume=0&revenue=current&factor[exchanges][]=&factor[exchanges][]=binance&dataset=Main&commit=Calculate";
+    var URL = "https://whattomine.com/coins";
+    var encodedUrl = URL + "?" + encodeURI(urlParam);
+    window.location.href = encodedUrl;
+  } else if(selectedValue == "btcgold") {
+    var urlParam = "eth=false&factor[eth_hr]=0&factor[eth_p]=0&factor[e4g_hr]=0&factor[e4g_p]=0&factor[zh_hr]=0&factor[zh_p]=0&factor[cnh_hr]=0&factor[cnh_p]=0&factor[cng_hr]=0&factor[cng_p]=0&factor[cnf_hr]=0&factor[cnf_p]=0&factor[cx_hr]=0&factor[cx_p]=0&factor[eqa_hr]=0&factor[eqa_p]=0&factor[cc_hr]=0&factor[cc_p]=0&factor[cr29_hr]=0&factor[cr29_p]=0&factor[ct31_hr]=0&factor[ct31_p]=0&factor[ct32_hr]=0&factor[ct32_p]=0&factor[eqb_hr]=0&factor[eqb_p]=0&factor[rmx_hr]=0&factor[rmx_p]=0&factor[ns_hr]=0&factor[ns_p]=0&factor[al_hr]=0&factor[al_p]=0&factor[ops_hr]=0&factor[ops_p]=0&factor[eqz_hr]=0&factor[eqz_p]=0&zlh=true&factor[zlh_hr]=" + document.getElementById("hash").value + "&factor[zlh_p]=0&kpw=false&factor[kpw_hr]=0&factor[kpw_p]=0&factor[ppw_hr]=0&factor[ppw_p]=0&factor[x25x_hr]=0&factor[x25x_p]=0&factor[fpw_hr]=0&factor[fpw_p]=0&factor[vh_hr]=0&factor[vh_p]=0&factor[cost]=0.0&factor[cost_currency]=USD&sort=Difficulty&volume=0&revenue=current&factor[exchanges][]=&factor[exchanges][]=binance&dataset=Main&commit=Calculate";
+    var URL = "https://whattomine.com/coins";
+    var encodedUrl = URL + "?" + encodeURI(urlParam);
+    window.location.href = encodedUrl;
   }
 
 }
