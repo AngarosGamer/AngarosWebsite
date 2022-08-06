@@ -44,6 +44,9 @@ select {
 #algo {
   background-color: #c69c6c;
 }
+.center {
+padding-left: 25vw;
+}
 /* Header Formatting - 3 different for each HTML page variant */
 .container {
   width: 100%;
