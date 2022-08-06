@@ -44,8 +44,46 @@ select {
 #algo {
   background-color: #c69c6c;
 }
+#flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 .center {
-padding-left: 25vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.column-new {
+  display: flex;
+  float: left;
+  width: 20%;
+  padding: 20px 10px 0;
+}
+.column-new:first-child {
+  padding-right: 2em;
+  padding-left: 6em;
+}
+.column-new:last-child {
+   padding-left: 6em;
+ }
+
+.cards-new {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  border-radius: 5px;
+  min-height: 200px;
+  max-width: 200px;
+  min-width: 200px;
+  padding: 16px;
+  text-align: center;
+  background-color: #303136;
+  transition: transform 0.5s;
+  margin: 0;
+}
+.cards-new:hover {
+  transform: translateY(-5px);
+}
+.cards-new p {
+  color: #c69c6c;
 }
 /* Header Formatting - 3 different for each HTML page variant */
 .container {
