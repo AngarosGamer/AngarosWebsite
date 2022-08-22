@@ -223,15 +223,25 @@ p {
   font-size: 13px;
   line-height: 20px;
 }
+
 code {
   background-color: #636469;
   border-radius: 3px;
   color: #fff;
+  font-size: 1rem;
 }
-#codeBlock {
+ul li {
+  font-size: 1rem;
+}
+ul li code {
+  font-size: 1rem;
+}
+.codeBlock {
   background-color: #636469;
   border-radius: 3px;
+  padding:4px;
   color: #fff;
+  font-size: 1rem;
 }
 a {
   color: #c69c6c;
@@ -506,7 +516,6 @@ width: 20%;
     }
     .content-inner li {
       color: #FFF;
-      font-size: 0.7rem;
       padding: 2px;
     }
 

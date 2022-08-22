@@ -32,7 +32,7 @@
       <!-- Header -->
       <div class="container3">
         <div class="navbar">
-            <a href="index.html"><img src="images/WebpageIcon.ico" class="logo"></a><div class="name">Angaros</div>
+            <a href="index.html"><img src="images/WebpageIcon.ico" class="logo" alt="Angaros Logo"></a><div class="name">Angaros</div>
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -77,7 +77,7 @@
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>There's a video that will explain in detail the process of setting up Phoenix. Essentially it's a recap of the written guide.</p><br><br>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/VUNu_KLjRGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/VUNu_KLjRGg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <p>As well as <a id="link" href="https://discord.gg/TujgMYdPdh">my Discord server</a></p>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                         <p>The following content is not official, but has been approved. It is not being monitored by Salad. The use of the following is at your own risk, and we will not be held liable for any damage, loss of information, or any issue whatsoever.
                             <br><br>
                             We cannot and will not pay you back in any event.</p>
-                        <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a childrens' playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
+                        <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a children's playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
                     </div>
                 </div>
                 <hr>
@@ -123,7 +123,7 @@
                     <div class="content-inner">
                         <p>Here is <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
 						<p>Note that Salad 1.0 no longer gives the required IDs to mine with Nicehash and Ethermine in the logs - If you wish to use either of these pools, you'll have to use Salad <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> to get the IDs required for these pools.</p>
-						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. T-Rex), opening the latest log inside of said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
+						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. T-Rex), opening the latest log inside said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
 						<br>
                         <p>It should look something like this:</p>
                         <div class ="row">
@@ -138,12 +138,14 @@
                 <label for="collapsible8" class="lbl-toggle">Step 3: Making your Salad CLI</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>- Go in the PhoenixMiner folder you installed in Step 1. You'll want to make a new file named <code>start.bat</code> (or any name you want, I just chose start for conveniency). To do that, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
+                        <p>- Go in the PhoenixMiner folder you installed in Step 1. You'll want to make a new file named <code>start.bat</code> (or any name you want, I just chose start for convenience). To do that, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
                         <p>- And next you'll want to start editing it.</p>
                         <p>- Enter the following two lines:<br>
-						<code>PhoenixMiner.exe -pool <i>&lt;pool&gt;</i> -wal <i>&lt;Wallet ID&gt;</i>.<i>&lt;Rig ID&gt;</i></code><br>
-						<code>pause</code></p>
-						<li>The <code>pause</code> just ensures that, if the miner closes unexpectedly, the CMD window will stay open so you can troubleshoot easily.</li></p><br>
+						<div class="codeBlock">
+                            PhoenixMiner.exe -pool <i>&lt;pool&gt;</i> -wal <i>&lt;Wallet ID&gt;</i>.<i>&lt;Rig ID&gt;</i><br>
+						    pause
+                        </div>
+						<p>The <code>pause</code> just ensures that, if the miner closes unexpectedly, the CMD window will stay open so you can troubleshoot easily.</p><br>
                         <p>- First, the pool and port:</p>
                         <ul>
                             <li>If you have a 4GB VRAM GPU, you can mine either Ethereum Classic, or Ravencoin:
@@ -166,7 +168,10 @@
 						<br><p>For Prohashing, Ensure that the end of your 'really long text' has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>. Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p>
                         
 						<p>- The final result of the bat file should look like, for a 6GB+ VRAM GPU:</p>
-                        <p><code><div id="codeBlock">PhoenixMiner.exe -pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -wal 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>pause</div></code></p>
+                        <div class="codeBlock">
+                            PhoenixMiner.exe -pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -wal 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
+                            pause
+                        </div>
                     </div>
                 </div>
                 <hr>
@@ -204,9 +209,12 @@
                             <li>You'll want <code>fanmin</code> to be smaller than <code>fanmax.</code></li>
                             <li>You'll want possible temperatures for <code>tstart</code> and <code>tstop</code>. (say, if your GPU is unable to go below 50°C, don't set a <code>tstart</code> at 30°C, otherwise it will never happen, same for <code>tstop</code>.)</li>
                         </ul>
-                        <p>If you want to view some of the others / more advanced features, you can check <a href="https://www.nicehash.com/blog/post/phoenixminer-command-line-options-(extra-launch-parameters)" target="_blank">this post.</a></p>
+                        <p>If you want to view some others / more advanced features, you can check <a href="https://www.nicehash.com/blog/post/phoenixminer-command-line-options-(extra-launch-parameters)" target="_blank">this post.</a></p>
                         <p>- The final result of the bat file should look like, for a 6GB+ VRAM GPU with extra commands:</p>
-                        <p><code><div id="codeBlock">PhoenixMiner.exe -pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -wal 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq -tstop 70 -tstart 55<br>pause</div></code></p>
+                        <div class="codeBlock">
+                            PhoenixMiner.exe -pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -wal 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq -tstop 70 -tstart 55<br>
+                            pause
+                        </div>
                     </div>
                 </div>
                 <hr>
@@ -214,7 +222,7 @@
                 <label for="collapsible11" class="lbl-toggle">Using your Salad CLI</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Save the file, and close it. Then just run it by double clicking it and verify that shares are being sent and received. If all works well, you'll be earning in no time!</p>
+                        <p>Save the file, and close it. Then just run it by double-clicking it and verify that shares are being sent and received. If all works well, you'll be earning in no time!</p>
                         <p>It can take some time until your earnings start showing up in Salad, so don't expect to earn within a minute. If after about 30 minutes you don't receive anything, then something went wrong. Verify that you followed all the steps right, and retry once the issue is fixed.</p>
                         <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
                         <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
@@ -222,7 +230,7 @@
                 </div>
                 <hr>
             </div>
-
+            </div>
         </div>
     </body>
 </html>

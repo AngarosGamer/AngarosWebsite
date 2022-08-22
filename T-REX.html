@@ -33,7 +33,7 @@
       <!-- Header -->
       <div class="container3">
         <div class="navbar">
-            <a href="index.html"><img src="images/WebpageIcon.ico" class="logo"></a><div class="name">Angaros</div>
+            <a href="index.html"><img src="images/WebpageIcon.ico" class="logo" alt="Angaros logo icon"></a><div class="name">Angaros</div>
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -72,7 +72,7 @@
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>There's a video that will explain in detail the process of setting up T-REX. Essentially it's a recap of the written guide, with extra info and parameters</p><br><br>
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XmAQWTkWMr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XmAQWTkWMr8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <p>As well as <a id="link" href="https://discord.gg/TujgMYdPdh">my Discord server</a></p>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                         <p>The following content is not official, but has been approved. It is not being monitored by Salad. The use of the following is at your own risk, and we will not be held liable for any damage, loss of information, or any issue whatsoever.
                             <br><br>
                             We cannot and will not pay you back in any event.</p>
-                            <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a childrens' playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
+                            <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a children's playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
                     </div>
                 </div>
                 <hr>
@@ -98,7 +98,7 @@
                             <li>500MB disk space</li>
                             <li>Have installed Salad (<a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> if you wish to use Nicehash or Ethermine pools)</li>
                             <li>To have mined once before (This is to generate your Rig and wallet ID, shown in Salad's logs in later steps)</li>
-                            <li>If using the trex lhr unlock to have the driver <a id="link" href="https://www.nvidia.com/download/driverResults.aspx/188989/en-us/" target="_blank">v512.77</a>.</li>
+                            <li>If using the TREX LHR unlock, you'll need to have the driver <a href="https://www.nvidia.com/download/driverResults.aspx/188989/en-us/" target="_blank">v512.77</a>.</li>
                         </ul>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                 <label for="collapsible6" class="lbl-toggle">Step 1: Install T-REX</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Start by installing the latest T-REX version, found <a id="link" href="https://github.com/trexminer/T-Rex/releases" target="_blank">here</a>.  This will install T-REX miner. It is a rather small package so it shouldn't take too long. Extract it to your folder of choice.</p>
-						<p>You would also want to whitelist the folder that you place T-REX in, just to ensure that your antivirus doesn't decide to interfere.<br><a href="https://support.salad.com/category/30-anti-virus/" target="_blank">Here</a> are some guides on how to whitelist a folder with most antiviruses.</p>
+                        <p>Start by installing the latest T-REX version, found <a href="https://github.com/trexminer/T-Rex/releases" target="_blank">here</a>.  This will install T-REX miner. It is a rather small package, so it shouldn't take too long. Extract it to your folder of choice.</p>
+						<p>You would also want to whitelist the folder that you place T-REX in, just to ensure that your antivirus doesn't decide to interfere.<br><a href="https://support.salad.com/category/30-anti-virus/" target="_blank">Here</a> are some guides on how to whitelist a folder with most antivirus.</p>
                     </div>
                 </div>
                 <hr>
@@ -118,7 +118,7 @@
                     <div class="content-inner">
                         <p>Here is <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
                         <p>Note that Salad 1.0 no longer gives the required IDs to mine with Nicehash and Ethermine in the logs - If you wish to use either of these pools, you'll have to use Salad <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> to get the IDs required for these pools.</p>
-						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. T-Rex), opening the latest log inside of said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
+						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. T-Rex), opening the latest log inside said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
                         <p>It should look something like this:</p>
                         <div class ="row">
                             <div class="column"><img src="images/RigIDs.png" alt="Snow" style="width:100%"></div>
@@ -132,37 +132,31 @@
                 <label for="collapsible8" class="lbl-toggle">Step 3: Making your Salad CLI</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>- Go in the T-REX folder you installed in Step 1. You'll find various files here, most commonly ones ending with '.bat' (Batch Files). You can choose to either edit one of these, or just create a fresh new batch file.<br><li>You can optionally delete any .bat files that you are not using, to clear some clutter.</li></p>
+                        <p>- Go in the T-REX folder you installed in Step 1. You'll find various files here, most commonly those ending with '.bat' (Batch Files). You can choose to either edit one of these, or just create a fresh new batch file.<br>
+                        <p>- You can optionally delete any .bat files that you are not using, to clear some clutter.</p>
                         <p>- If you choose to create a new .bat file, create any text file (right click --> "New" --> "Text Document"), then save it as <code>start.bat</code></p>
                         <p>- At the end of the day, you're going to end up with a .bat file that should look something like this:</p>
-                        <li>Nicehash:</li>
-						<code>
-                            <div id="codeBlock">
+                        <p>Nicehash:</p>
+                        <div class="codeBlock">
                             t-rex.exe --algo <i>&lt;algorithm&gt;</i> --url <i>&lt;pool&gt;</i> --user <i>&lt;Wallet Address&gt;</i>.<i>&lt;Rig ID&gt;</i><br>
                             pause
-                            </div>
-                        </code>
-                        <br><li>Ethermine:</li>
-                        <code>
-                            <div id="codeBlock">
+                        </div>
+                        <br><p>Ethermine:</p>
+                        <div class="codeBlock">
                             t-rex.exe --algo <i>&lt;algorithm&gt;</i> --url <i>&lt;pool&gt;</i> --user <i>&lt;Wallet Address&gt;</i> --worker <i>&lt;Worker ID&gt;</i><br>
                             pause
-                            </div>
-                        </code>
-						<br><li>Prohashing:</li>
-						<code>
-							<div id="codeBlock">
+                        </div>
+						<br><p>Prohashing:</p>
+                        <div class="codeBlock">
 							trex.exe --algo <i>&lt;algorithm&gt;</i> --url <i>&lt;pool&gt;</i> --user salad -pass <i>&lt;Your Prohashing ID&gt;</i><br>
 							pause
-							</div>
-						</code>
+                        </div>
                         <br><p>- First, the algorithm. There are 3 options:
                             <ul>
                                 <li>Ethereum (5GB+ GPUs): <code>ethash</code></li>
                                 <li>RavenCoin (4GB+ GPUs): <code>kawpow</code></li>
                                 <li>Ethereum Classic (4GB+ GPUs): <code>etchash</code></li>
                             </ul>
-                        </p>
                         <p>- Second, the pool: You'll want to use one of the following:</p>
                         <ul>
                             <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethereum. If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
@@ -176,14 +170,14 @@
 						<p>Ensure that the end of your 'really long text' Prohashing ID has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
                         <p>- Here's an example of a completed ETH (Ethereum) file for Nicehash:</p>
                         <code>
-                            <div id="codeBlock">
+                            <div class="codeBlock">
                                 t-rex.exe --algo ethash --url stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
                                 pause
                             </div>
                         </code>
 						<br><p>- And here's an example of a completed ETC (Ethereum Classic) file for Ethermine:</p>
 						<code>
-							<div id="codeBlock">
+							<div class="codeBlock">
 								t-rex.exe --algo etchash --url eu1-etc.ethermine.org:4444 --user 6ff85749ffac2d3a36efa2bc916305433fa93731 --worker 8sqe3di5hfeeonq<br>
 								pause
 							</div>
@@ -197,8 +191,8 @@
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>You're in luck! T-REX automatically unlocks LHR for any applicable LHR GPUs - All you need to do is run T-REX as administrator.<br>In case if you're worried about potential security issues by doing so, T-REX is a trusted miner among the mining community, with tens of thousands of users. Salad even plans to add this exact feature officially to Salad 1.0!</p><br>
-                        <p>Note that for trex to fully unlock your gpu you need to download the correct drivers v512.77, you can find them here <a id="link" href="https://www.nvidia.com/download/driverResults.aspx/188989/en-us/" target="_blank">Driver Download</a>.</p>
-						<p>To do so, you'd want to right click on <code>t-rex.exe</code>, then click on Properties.</p>
+                        <p>Note that for trex to fully unlock your gpu you need to download the correct drivers v512.77, you can find them here <a href="https://www.nvidia.com/download/driverResults.aspx/188989/en-us/" target="_blank">Driver Download</a>.</p>
+						<p>To do so, you'd want to right-click on <code>t-rex.exe</code>, then click on Properties.</p>
 						<p>You next click on the 'Compatibility' tab at the top.</p>
 						<p>Near the bottom, tick 'Run this program as administrator'.</p>
 						<p>Hit apply, then run your <code>start.bat</code> file, and T-REX should now start as administrator and automatically 100% unlock your LHR GPU!</p>
@@ -218,10 +212,10 @@
                             <li><code>--temperature-limit x</code> : Stops the miner when that temperature (x) is reached.</li>
                             <li><code>--temperature-start y</code> : Starts the miner back up once GPU temperature has cooled down to (y).</li>
                         </ul>
-                        <p>The full in-depth list of T-REX miner arguments can be found <a id="link" href="https://github.com/trexminer/T-Rex/blob/master/README.md#usage" target="_blank">Here</a>.</p>
+                        <p>The full in-depth list of T-REX miner arguments can be found <a href="https://github.com/trexminer/T-Rex/blob/master/README.md#usage" target="_blank">Here</a>.</p>
                         <p>- Here's an example of a completed ETH (Ethereum) file for Nicehash with extra commands:</p>
                         <code>
-                            <div id="codeBlock">
+                            <div class="codeBlock">
                                 t-rex.exe --algo ethash --url stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --devices 0,2,3 --intensity 18<br>
                                 pause
                             </div>
@@ -234,7 +228,7 @@
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>Now just save that .bat file, close it, and run it. It should work if everything was set up properly.</p>
-                        <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you follwed all steps and retry once the issue is fixed.</p>
+                        <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you followed all steps and retry once the issue is fixed.</p>
                         <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
                         <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
                     </div>

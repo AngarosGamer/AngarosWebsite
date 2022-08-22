@@ -32,7 +32,7 @@
       <!-- Header -->
       <div class="container3">
         <div class="navbar">
-            <a href="index.html"><img src="images/WebpageIcon.ico" class="logo"></a><div class="name">Angaros</div>
+            <a href="index.html"><img src="images/WebpageIcon.ico" class="logo" alt="Angaros Logo"></a><div class="name">Angaros</div>
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -72,7 +72,7 @@
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>I'm in the process of making a video guide for XMRig CPU. Stay tuned!</p>
-                        <p>Join <a id="link" href="https://discord.gg/TujgMYdPdh">my Discord server</a> for extra help!</p>
+                        <p>Join <a href="https://discord.gg/TujgMYdPdh">my Discord server</a> for extra help!</p>
                     </div>
                 </div>
                 <hr>
@@ -83,7 +83,7 @@
                         <p>The following content is not official, but has been approved. It is not being monitored by Salad. The use of the following is at your own risk, and we will not be held liable for any damage, loss of information, or any issue whatsoever.
                         <br><br>
                         We cannot and will not pay you back in any event.</p>
-                        <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a childrens' playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
+                        <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a children's playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
 						<br><br><p><b>IMPORTANT!</b><br>
 						Depending on your local electricity costs and your CPU's performance, CPU mining may <i>potentially</i> not be profitable for you. We recommend using a <a href="https://www.nicehash.com/profitability-calculator/" target="_blank">mining profitability calculator</a> for your CPU, to determine if it is worth it for you. Though if you don't have to worry about paying for your electricity, this isn't of concern.</p>
 						<p>We should also note that if you are CPU + GPU mining at the same time, this will introduce roughly twice as much heat into your system. Ensure that your PC is well cooled, preferably checking that your CPU and GPU temperatures don't exceed 80&#176;c.<br>
@@ -110,7 +110,7 @@
                 <label for="collapsible6" class="lbl-toggle">Step 1: Install XMRig</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
-                        <p>Start by installing the latest XMRig gcc-win64.zip version, found <a href="https://github.com/xmrig/xmrig/releases" target="_blank">Here</a>. This will install the base XMRig miner with the dependencies and required files. It is a rather small package so it shouldn't take too long. Extract it to your folder of choice.</p>
+                        <p>Start by installing the latest XMRig gcc-win64.zip version, found <a href="https://github.com/xmrig/xmrig/releases" target="_blank">Here</a>. This will install the base XMRig miner with the dependencies and required files. It is a rather small package, so it shouldn't take too long. Extract it to your folder of choice.</p>
                     </div>
                 </div>
                 <hr>
@@ -120,7 +120,7 @@
                     <div class="content-inner">
                         <p>Here is <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
                         <p>Note that Salad 1.0 no longer gives the required IDs to mine with Nicehash in the logs - If you wish to use Nicehash's pool, you'll have to use Salad <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> to get the IDs required for these pools.</p>
-						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. XMRig), opening the latest log inside of said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
+						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. XMRig), opening the latest log inside said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
                         <p>It should look something like this:</p>
                         <div class ="row">
                             <div class="column"><img src="images/RigIDs.png" alt="Snow" style="width:100%"></div>
@@ -137,18 +137,18 @@
                         <p>- Go in the XMRig folder you installed in Step 1. You'll find a file named <code>start.bat</code>. You'll want to open it with notepad, or a code editor.</p>
                         <p>Should it not exist, you can also just create it.</p>
                         <p>- We will need to edit the <code>start</code> file, by adding the correct information:</p>
-                        <li>Nicehash:</li>
-						<code><div id="codeBlock">
+                        <p>Nicehash:</p>
+						<div class="codeBlock">
                             @echo off<br>
                             xmrig.exe --donate-level=1 -o <i>&lt;pool&gt;</i> -u <i>&lt;Wallet Address&gt;</i>.<i>&lt;Rig ID&gt;</i> -a randomx -k --nicehash<br>
                             pause
-                        </div></code><br>
-						<li>Prohashing:</li>
-						<code><div id="codeBlock">
+                        </div><br>
+						<p>Prohashing:</p>
+						<div class="codeBlock">
                             @echo off<br>
                             xmrig.exe --donate-level=1 -o <i>&lt;pool&gt;</i> -u salad -p <i>&lt;That long string of text&gt;</i> -a randomx -k<br>
                             pause
-						</div></code>
+						</div>
                         <p>- First, the pool and port: You'll want to use one of these two:</p>
                         <ul>
 							<li><code>stratum+ssl://randomxmonero.auto.nicehash.com:443</code> - Nicehash RandomX. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://randomxmonero.auto.nicehash.com:9200</code></li>
@@ -158,17 +158,17 @@
 						<br>For Prohashing, you'll need to use your 'long string of text' Prohashing ID. If the algorithm indicator at the end of the ID (<code>,a=</code>) doesn't work, try removing it. It should work without it.</p>
 
                         <p>- Here's an example of a completed file, using Nicehash's pool:</p>
-                        <code><div id="codeBlock">
+                        <div class="codeBlock">
                             @echo off<br>
                             xmrig.exe --donate-level=1 -o stratum+ssl://randomxmonero.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a randomx -k --nicehash<br>
                             pause
-                        </div></code><br>
+                        </div><br>
 						<p>- And here's an example of a completed file, using Prohashing's pool:</p>
-						<code><div id="codeBlock">
+						<div class="codeBlock">
                             @echo off<br>
                             xmrig.exe --donate-level=1 -o stratum+tcp://prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
                             pause
-						</div></code>
+						</div>
                     </div>
                 </div>
                 <hr>
@@ -185,13 +185,13 @@
 							<li><code>--cpu-priority=n</code> : Where 'n' is a number between 0 - 5, determining the miner's process priority. 0 is for idle, 2 is normal priority (Default), and 5 is the highest priority. Usually leaving this as default is good enough, but if you don't mind your PC being slower, you can manually set this higher.</li>
 							<li></li>
                         </ul>
-                        <p>There are more to be found <a id="link" href="https://xmrig.com/docs/miner/command-line-options" target="_blank">here</a> for aditional customisation.</p>
+                        <p>There are more to be found <a id="link" href="https://xmrig.com/docs/miner/command-line-options" target="_blank">here</a> for additional customisation.</p>
                         <p>- Here's an example of a completed file, using Nicehash's pool with extra commands:</p>
-                        <code><div id="codeBlock">
+                        <div class="codeBlock">
                             @echo off<br>
                             xmrig.exe --donate-level=1 -o stratum+ssl://randomxmonero.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a randomx -k --nicehash --print-time=5 -k<br>
                             pause
-                        </div></code>
+                        </div>
                     </div>
                 </div>
                 <hr>
@@ -200,7 +200,7 @@
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>Save the <code>start.bat</code> file, close it, and run it. It should work if everything was set up properly.</p>
-                        <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you follwed all steps and retry once the issue is fixed.</p>
+                        <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you followed all steps and retry once the issue is fixed.</p>
                         <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
                         <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
                     </div>
@@ -212,10 +212,10 @@
                     <div class="content-inner">
 					<p>You can optionally choose to run XMRig as administrator to enable 'MSR', which you can read more about <a href="https://xmrig.com/docs/miner/randomx-optimization-guide/msr" target="_blank">Here</a>.</p>
 					<p>The above article should do a good job of explaining what it is, but it basically optimises some settings on the OS level, noticeably increasing your hashrate as a result.</p>
-					<p>Typically you should be cautious about giving miners administrative priviledges, and you'd be right for doing so! <br>XMRig is, however, one of the few exceptions to this rule, because it is entirely open source.
+					<p>Typically you should be cautious about giving miners administrative privileges, and you'd be right for doing so! <br>XMRig is, however, one of the few exceptions to this rule, because it is entirely open source.
 					<br>This means that its many hundreds of thousands of users can easily dive into XMRig's source code and verify for themselves that there is indeed nothing shady going on.</p><br>
 					
-					<p>To do this, you'd want to right click on <code>xmrig.exe</code>, then click on Properties.</p>
+					<p>To do this, you'd want to right-click on <code>xmrig.exe</code>, then click on Properties.</p>
 					<p>You next click on the 'Compatibility' tab at the top.</p>
 					<p>Near the bottom, tick 'Run this program as administrator'.</p>
 					<p>Hit apply, then run your <code>start.bat</code> file, and XMRig should now start as administrator and automatically apply the MSR mod!</p>
