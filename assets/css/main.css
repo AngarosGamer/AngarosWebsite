@@ -359,12 +359,15 @@ a {
 .column2 {
   display: flex;
   width: 20%;
+  min-width: 200px;
   padding: 0 10px;
+  margin-bottom: 10px;
 }
 .rows2 {
   margin: 0 -5px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .rows2:after {
   content: "";
@@ -379,6 +382,7 @@ a {
   text-align: center;
   background-color: #303136;
   transition: transform 0.5s;
+  min-width: 200px;
 }
 .cards2:hover {
   transform: translateY(-5px);
