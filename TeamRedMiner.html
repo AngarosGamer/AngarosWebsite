@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 
 <!-- If you're seeing this, you're definitely a Russian spy stealing intelligence -->
 
@@ -142,30 +142,32 @@
                         <code>
                             teamredminer.exe -a <i>&lt;algorithm&gt;</i> -o <i>&lt;pool&gt;</i> -u salad -p <i>&lt;Your Prohashing ID&gt;</i>
 						</code>
-                        <br><p>- First, the algorithm. There are 3 options:
+                        <br><p>- First, the algorithm. There are 2 options:
                             <ul>
-                                <li>Ethereum (5GB+ GPUs): <code>ethash</code></li>
-                                <li>RavenCoin (4GB+ GPUs): <code>kawpow</code></li>
+                                <li>Ravencoin (4GB+ GPUs): <code>kawpow</code></li>
                                 <li>Ethereum Classic (4GB+ GPUs): <code>etchash</code></li>
                             </ul>
                         <p>- Second, the pool: You'll want to use one of the following:</p>
                         <ul>
-                            <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethereum. If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
-                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li><br>
-                            <li><code>eu1.ethermine.org:4444</code> For Ethermine Ethereum. You can optionally change locations to the one closest to you: eu1, us1, us2, asia1, asia2.</li>
-							<li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li><br>
-							<li><code>stratum+tcp://prohashing.com:3339</code> For Prohashing Ethash (Ethereum).<br>
+                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
+                            <li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li>
 							<li><code>stratum+tcp://prohashing.com:3361</code> For Prohashing KawPow (Ravencoin).</li>
-                        </ul><br>
+                        </ul>
+						<br>
                         <p>- Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for the Nicehash format, the <b>Ethermine</b> values for the Ethermine format, and the <b>Prohashing</b> values for the Prohashing format.</p>
-						<p>Ensure that the end of your 'really long text' Prohashing ID has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
-                        <p>- Here's an example of a completed ETH (Ethereum) file for Nicehash:</p>
+						<p>Ensure that the end of your 'really long text' 
+						Prohashing ID has the correct algorithm! For KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
+                        <p>- Here's an example of a completed ETC (Ethereum 
+						Classic) file for Ethermine:</p>
                         <code>
-                                teamredminer.exe -a ethash -o stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -u 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq
+                                teamredminer.exe -a etchash -o 
+						eu1-etc.ethermine.org:4444 -u 
+						6ff85749ffac2d3a36efa2bc916305433fa93731.8sqe3di5hfeeonq
                         </code>
-						<br><p>- And here's an example of a completed RVN (Raven Coin) file for Prohashing:</p>
+						<br><p>- And here's an example of a completed KawPow (Ravencoin) file for Prohashing:</p>
 						<code>
-								teamredminer.exe -a kawpow -o stratum+tcp://prohashing.com:3361 -u Salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787
+								teamredminer.exe -a 
+						kawpow -o stratum+tcp://prohashing.com:3361 -u Salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787
 						</code>
                     </div>
                 </div>
@@ -181,9 +183,9 @@
                             <li><code>--temp_resume=y</code> : Starts the miner back up once GPU temperature has cooled down to (y). Default is 60&#176;c.</li>
                         </ul>
                         <p>The full in-depth list of TeamRedMiner miner arguments can be found <a href="https://github.com/todxx/teamredminer/blob/master/USAGE.txt" target="_blank">Here</a>.</p>
-                        <p>- Here's an example of a completed ETH (Ethereum) file for Nicehash with extra commands:</p>
+                        <p>- Here's an example of a completed KawPow (Ravencoin) file for Nicehash with extra commands:</p>
                         <code>
-                                teamredminer.exe -a ethash -o stratum+ssl://daggerhashimoto.auto.nicehash.com:443 -u 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --temp_limit=75 --temp_resume=50
+                                teamredminer.exe -a kawpow -o stratum+ssl://kawpow.auto.nicehash.com:443 -u 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --temp_limit=75 --temp_resume=50
                         </code>
                     </div>
                 </div>
