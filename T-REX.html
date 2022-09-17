@@ -48,7 +48,7 @@
             <br><br>
             <h1>T-REX guide</h1>
             <p>
-                Made by Angaros#1263 - Last update 22/08/2022 @14:26 UTC+1
+                Made by Angaros#1263 - Last update 15/09/2022 @18:01 UTC+1
             </p>
 
             <hr>
@@ -151,27 +151,25 @@
 							trex.exe --algo <i>&lt;algorithm&gt;</i> --url <i>&lt;pool&gt;</i> --user salad -pass <i>&lt;Your Prohashing ID&gt;</i><br>
 							pause
                         </div>
-                        <br><p>- First, the algorithm. There are 3 options:
+                        <br><p>- First, the algorithm. There are 2 options:
                             <ul>
-                                <li>Ethereum (5GB+ GPUs): <code>ethash</code></li>
-                                <li>RavenCoin (4GB+ GPUs): <code>kawpow</code></li>
+                                <li>Ravencoin (4GB+ GPUs): <code>kawpow</code></li>
                                 <li>Ethereum Classic (4GB+ GPUs): <code>etchash</code></li>
                             </ul>
                         <p>- Second, the pool: You'll want to use one of the following:</p>
                         <ul>
-                            <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethereum. If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
-                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li><br>
-                            <li><code>eu1.ethermine.org:4444</code> For Ethermine Ethereum. You can optionally change locations to the one closest to you: eu1, us1, us2, asia1, asia2.</li>
-							<li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li><br>
-							<li><code>stratum+tcp://prohashing.com:3339</code> For Prohashing Ethash (Ethereum).<br>
+                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash KawPow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
+                            <li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li>
 							<li><code>stratum+tcp://prohashing.com:3361</code> For Prohashing KawPow (Ravencoin).</li>
-                        </ul><br>
+                        </ul>
+						<br>
                         <p>- Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for the Nicehash format, the <b>Ethermine</b> values for the Ethermine format, and the <b>Prohashing</b> values for the Prohashing format.</p>
-						<p>Ensure that the end of your 'really long text' Prohashing ID has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
-                        <p>- Here's an example of a completed ETH (Ethereum) file for Nicehash:</p>
+						<p>Ensure that the end of your 'really long text' 
+						Prohashing ID has the correct algorithm! For KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
+                        <p>- Here's an example of a completed KawPow (Ravencoin) file for Nicehash:</p>
                         <code>
                             <div class="codeBlock">
-                                t-rex.exe --algo ethash --url stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
+                                t-rex.exe --algo kawpow --url stratum+ssl://kawpow.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
                                 pause
                             </div>
                         </code>
@@ -186,18 +184,6 @@
                 </div>
 				
                 <hr>
-                <input id="collapsible9" class="toggle" type="checkbox"> 
-                <label for="collapsible9" class="lbl-toggle">Step 4: For LHR users!</label>
-                <div class="collapsible-content">
-                    <div class="content-inner">
-                        <p>You're in luck! T-REX automatically unlocks LHR for any applicable LHR GPUs - All you need to do is run T-REX as administrator.<br>In case if you're worried about potential security issues by doing so, T-REX is a trusted miner among the mining community, with tens of thousands of users. Salad even plans to add this exact feature officially to Salad 1.0!</p><br>
-                        <p>Note that for trex to fully unlock your gpu you need to download the correct drivers v512.77, you can find them here <a href="https://www.nvidia.com/download/driverResults.aspx/188989/en-us/" target="_blank">Driver Download</a>.</p>
-						<p>To do so, you'd want to right-click on <code>t-rex.exe</code>, then click on Properties.</p>
-						<p>You next click on the 'Compatibility' tab at the top.</p>
-						<p>Near the bottom, tick 'Run this program as administrator'.</p>
-						<p>Hit apply, then run your <code>start.bat</code> file, and T-REX should now start as administrator and automatically 100% unlock your LHR GPU!</p>
-                    </div>
-                </div>
 				
                 <hr>
                 <input id="collapsible10" class="toggle" type="checkbox"> 
@@ -213,10 +199,10 @@
                             <li><code>--temperature-start y</code> : Starts the miner back up once GPU temperature has cooled down to (y).</li>
                         </ul>
                         <p>The full in-depth list of T-REX miner arguments can be found <a href="https://github.com/trexminer/T-Rex/blob/master/README.md#usage" target="_blank">Here</a>.</p>
-                        <p>- Here's an example of a completed ETH (Ethereum) file for Nicehash with extra commands:</p>
+                        <p>- Here's an example of a completed KawPow (Ravencoin) file for Nicehash with extra commands:</p>
                         <code>
                             <div class="codeBlock">
-                                t-rex.exe --algo ethash --url stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --devices 0,2,3 --intensity 18<br>
+                                t-rex.exe --algo kawpow --url stratum+ssl://kawpow.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --devices 0,2,3 --intensity 18<br>
                                 pause
                             </div>
                         </code>

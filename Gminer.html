@@ -47,7 +47,7 @@
             <br><br>
             <h1>GMiner guide</h1>
             <p>
-                Made by Angaros#1263 - Last update 19/06/2022 @15:10 GMT+1
+                Made by Angaros#1263 - Last update 15/09/2022 @18:01 GMT+1
             </p>
 
             <hr>
@@ -146,31 +146,24 @@
                         </div>
                         <br><p>First, the algorithm. There are 3 options:
                             <ul>
-                                <li>Ethereum (5GB+ GPUs): <code>ethash</code></li>
-                                <li>RavenCoin (4GB+ GPUs): <code>kawpow</code></li>
+                                <li>Ravencoin (4GB+ GPUs): <code>kawpow</code></li>
                                 <li>Ethereum Classic (4GB+ GPUs): <code>etchash</code></li>
                                 <li>Bitcoin Gold (2GB+ GPUs): <code>144_5</code></li>
                             </ul>
                         <p>Second, the pool: You'll want to use one of the following:</p>
                         <ul>
-                            <li><code>stratum+ssl://daggerhashimoto.auto.nicehash.com:443</code> For Nicehash Ethash (Ethereum). If you have issues with SSL, you can alternatively use <code>stratum+tcp://daggerhashimoto.auto.nicehash.com:9200</code></li>
                             <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow (Ravencoin). If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
-                            <li><code>stratum+ssl://zhash.auto.nicehash.com:443</code> - For Nicehash 144_5 (Bitcoin Gold). If you have issues with SSL, you can alternatively use <code>stratum+tcp://zhash.auto.nicehash.com:9200</code></li><br>
-                            <li><code>eu1.ethermine.org:4444</code> For Ethermine Ethash (Ethereum). You can optionally change locations to the one closest to you: eu1, us1, us2, asia1, asia2.</li>
-							<li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li><br>
-							<li><code>stratum+tcp://prohashing.com:3339</code> For Prohashing Ethash (Ethereum).<br>
+                            <li><code>stratum+ssl://zhash.auto.nicehash.com:443</code> - For Nicehash 144_5 (Bitcoin Gold). If you have issues with SSL, you can alternatively use <code>stratum+tcp://zhash.auto.nicehash.com:9200</code></li>
+                            <li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li>
 							<li><code>stratum+tcp://prohashing.com:3361</code> For Prohashing KawPow (Ravencoin).</li>
-                        </ul><br>
+                        </ul>
+						<br>
                         <p>Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for the Nicehash format, the <b>Ethermine</b> values for the Ethermine format, and the <b>Prohashing</b> values for the Prohashing format.</p>
-						<p>Ensure that the end of your 'really long text' Prohashing ID has the correct algorithm! For Ethash it should be <code>,a=ethash</code>, and for KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
-                        <p>Here's an example of a completed ETH (Ethereum) file for Nicehash:</p>
+						<p>Ensure that the end of your 'really long text' 
+						Prohashing ID has the correct algorithm! For KawPow it should be <code>,a=kawpow</code>.<br>Though if this doesn't work, try removing the ',a' algorithm indicator. It should work without it.</p><br>
+                        <p>Here's an example of a completed KawPow (Ravencoin) file for Nicehash:</p>
                         <div class="codeBlock">
-                            miner.exe --algo ethash --server stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
-                            pause
-                        </div>
-						<br><p>And here's an example of a completed RVN (Ravencoin) file for Prohashing:</p>
-						<div class="codeBlock">
-                            miner.exe --algo etchash --server stratum+tcp://prohashing.com:3361 --user Salad --pass o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787<br>
+                            miner.exe --algo kawpow --server stratum+ssl://kawpow.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
                             pause
                         </div>
                         <br><p>And here's an example of a completed BTG (Bitcoin Gold) file for Nicehash:</p>
@@ -178,18 +171,6 @@
                             miner.exe --algo 144_5 --pers BgoldPoW --server stratum+ssl://zhash.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq<br>
                             pause
                         </div>
-                    </div>
-                </div>
-                <hr>
-                <input id="collapsible9" class="toggle" type="checkbox"> 
-                <label for="collapsible9" class="lbl-toggle">Step 4: For LHR users!</label>
-                <div class="collapsible-content">
-                    <div class="content-inner">
-                        <p>You're in luck! GMiner automatically unlocks LHR for any applicable LHR GPUs - All you need to do is run GMiner as administrator.<br>In case if you're worried about potential security issues by doing so, GMiner is a trusted miner among the mining community, with tens of thousands of users.</p><br>
-						<p>To do so, you'd want to right-click on <code>miner.exe</code>, then click on Properties.</p>
-						<p>You next click on the 'Compatibility' tab at the top.</p>
-						<p>Near the bottom, tick 'Run this program as administrator'.</p>
-						<p>Hit apply, then run your <code>start.bat</code> file, and GMiner should now start as administrator and automatically 100% unlock your LHR GPU!</p>
                     </div>
                 </div>
 				
@@ -206,9 +187,9 @@
                             <li><code>--templimit_mem y</code> : Stops the miner when that temperature (y) on the vram is reached it will automatically start when the gpu is cooled down.</li>
                         </ul>
                         <p>The full in-depth list of GMiner miner arguments can be found <a href="https://github.com/develsoftware/GMinerRelease#miner-options" target="_blank">Here</a>.</p>
-                        <p>Here's an example of a completed ETH (Ethereum) file for Nicehash with extra commands:</p>
+                        <p>Here's an example of a completed KawPow (Ravencoin) file for Nicehash with extra commands:</p>
                         <div class="codeBlock">
-                            miner.exe --algo ethash --server stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --templimit 60 --intensity 70<br>
+                            miner.exe --algo kawpow --server stratum+ssl://kawpow.auto.nicehash.com:443 --user 33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.8sqe3di5hfeeonq --templimit 60 --intensity 70<br>
                             pause
                         </div>
                     </div>
