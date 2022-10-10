@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+
+<!-- If you're seeing this, you're definitely a Russian spy stealing intelligence -->
+
+<html lang="en">
+    <head>
+        <title>Angaros - Overclocking</title>
+        <meta property="og:type" content="https://angaros.me/overclocking">
+        <meta property="og:title" content="Angaros - Overclocking guide!" />
+        <meta property="og:description" content="Find the overclocking guide to Salad CLI mining!" />
+        <meta property="og:url" content="https://angaros.me/overclocking" />
+        <meta property="og:image" content="images/WebpageIcon.jpg" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <script src="assets/js/main.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="images/WebpageIcon.ico" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKMYGRM19T"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZKMYGRM19T');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3813448291104059"
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <!-- Header -->
+      <div class="navbar">
+        <a href="https://angaros.me/index"><img src="images/WebpageIcon.ico" class="logo" alt="Angaros Logo"></a><div class="name">Angaros</div>
+        <nav>
+          <ul>
+            <li><a href="https://angaros.me/index">Home</a></li>
+            <li><a href="https://angaros.me/cli">CLI</a></li>
+            <li><a href="https://rich-presence-website.vercel.app/index.html">Discord RPC</a></li>
+            <li><a href="./assets/Salad.io_Unofficial.apk">Salad Mobile</a></li>
+            <li><a href="https://angaros.me/otherapps">Other apps</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr>
+        <button class="glow-on-hover" onclick="goBack()">&#8592; Go Back</button>
+        <div id="maintext">
+            <br><br>
+            <h1>Overclocking Guide</h1>
+            <p>
+                Made by Plerion#6666 based on Happy Pill#9683's guide - Last update 
+				15/09/2022 @17:59 UTC+1
+            </p>
+
+            <hr>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible2" class="toggle" type="checkbox"> 
+                <label for="collapsible2" class="lbl-toggle">Advantages</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Overclocking allows you to:</p>
+                        <ul>
+                            <li>Get more earnings</li>
+                            <li>Lower power usage</li>
+                            <li>Increase the life of your GPU</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible4" class="toggle" type="checkbox"> 
+                <label for="collapsible4" class="lbl-toggle">Warnings</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>The following content is not official, and is not being monitored by Salad. The use of the following is solely at your own risk, and <b>we will not be held liable for any damage</b>, loss of information, or any issue whatsoever.
+                            <br><br>
+                            We cannot and will not pay you back in any event.</p>
+                            <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a children's playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible5" class="toggle" type="checkbox"> 
+                <label for="collapsible5" class="lbl-toggle">Prerequisites</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <ul>
+                            <li>Internet Connection</li>
+                            <li>A GPU with 3GB+ VRAM</li>
+                            <li>500MB disk space</li>
+                            <li>Have installed MSI Afterburner, found <a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank">Here</a>.</li>
+                            <li>User competency</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible6" class="toggle" type="checkbox"> 
+                <label for="collapsible6" class="lbl-toggle">Step 1: Increasing Hashrate</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>For the most effective results, ensure that you follow this guide in order!</p>
+						<p>When tuning a GPU for mining on Etchash, the first step is to start pushing the memory to its absolutely limit before it crashes or becomes unstable.
+						<br>Basically, just start moving the memory clock slider in MSI afterburner up by around 50MHz at a time until you error out, shows some artifacts, or your display driver dies. A simple restart will fix the latter, and the former can be remedied by backing off the overclock a little). Make sure to be doing all of this WHILE mining!
+						<br>Sometimes you may get worse hashrate without any noticeable errors, so watch out for that and back off the overclock a little if it does happen.</p>
+						
+						<p>When tuning a GPU for most other algorithms (Like KawPow), you want to follow a similar process but apply it to the core as well, just in smaller increments of ~30MHz.</p>
+						<p>Most of this guide is also applicable to AMD GPUs; Increase memory clock, reduce power limit a bit, and balance fan speeds to GPU temperatures.</p>
+						<ul>
+						<li><i>MEMORY ONLY</i></li>
+						<li>For some time savings, you can usually use the following as starting points (use the process above, just start from these figures rather than 0) for your applicable cards:</li>
+						<li>For GDDR5 Turing cards (The base 1650 and 1660): +500</li>
+						<li>For GDDR6 Turing cards (All other GTX 16x0 and RTX 20x0 cards): +700-800</li>
+						<li>For Turing Max Q cards: +500 (<a href="https://www.techpowerup.com/gpu-specs/?mobile=Yes&architecture=Turing&sort=generation" target="_blank">These</a>)</li>
+						<li>Ampere (RTX 30) cards: +1000*</li>
+						<li>Lower-end mobile Ampere (~RTX 3050/ti) cards: +600</li>
+						</ul>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible8" class="toggle" type="checkbox"> 
+                <label for="collapsible8" class="lbl-toggle">Step 2: Power</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+						<p>Start lowering the power limit until you start losing hashrate. You want it to be as low as possible without sacrificing performance.</p>
+						<p>You can usually lower your power limit to somewhere around 75% without noticeably losing much hashrate - but if you go lower than this, be aware that there's the potential that it can drop off significantly.</p>
+						<p>It's a bit of a balancing game - For example, would you lower your hashrate by 0.2mh/s, but save 10w? In this case, most people probably would. But if you only care about earning money, and don't have to worry about electricity usage / heat output, you may very well want that extra bit of hashrate. It's your choice.</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible9" class="toggle" type="checkbox"> 
+                <label for="collapsible9" class="lbl-toggle">Step 3: Cooling</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Now that your overclock settings are all dialed in, you next need to keep an eye on your GPU's temperatures. Each GPU model has its own unique maximum thermal limit, but generally you don't want it to exceed 80&#176;c.
+						<br>You may need to increase your fan speed to keep it in the safe zone, ideally around 65 - 75&#176;c.</p>
+						<p>If your GPU is managing to stay even cooler than this, you could choose to reduce your fan speeds a little, to reduce the likely noise that they're producing.</p>
+						<p>Once you've found a nice balance between GPU temperature and fan noise, you should be all good to go!</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible10" class="toggle" type="checkbox"> 
+                <label for="collapsible10" class="lbl-toggle">Notes</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                       <p>- To make everything easier and safer, save these settings to a profile but <b>do NOT enable apply on Windows startup</b>. Doing so with an unstable oc could cause an infinite crash loop when you boot up, which can only be escaped by holding the Ctrl key right after login.</p>
+					   <p>- If you plan to game, press the reset button on Afterburner to reset your overclock - or select your gaming overclock profile, if you have one, to prevent accidental crashes.</p>
+					   <p>- If your fan speeds are above ~80% and your GPU temperatures are still somewhere above 75&#176;c, there's likely an issue, or you haven't followed the guide in the correct order.</p>
+					   <br><p>Additional nerdy info below</p>
+					   <p>- *Note that GDDR6X GPUs (3070ti through to 3090ti - <a href="https://www.techpowerup.com/gpu-specs/?architecture=Ampere&memtype=GDDR6X&sort=generation" target="_blank">These</a>) can generally clock substantially higher than this. However, GDDR6X is very prone to performance degradation rather than errors or showing artifacts. As such, it is particularly important to monitor hashrate while testing settings on these cards.
+					   <br>Also of interest is that these memory chips seem to scale with temperatures, to a degree. This means that cooling your memory chips better may lead to improved clocks / stability, and consequently a higher hashrate.
+					   <br>Replacing your VRAM's thermal pads (re-padding) may be worth considering in some cases if you are comfortable with it. If not, just ensure that your GPU has very adequate cooling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </body>
+</html>

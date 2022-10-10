@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+
+<!-- If you're seeing this, you're definitely a Russian spy stealing intelligence -->
+
+<html lang="en">
+    <head>
+        <title>Angaros - XMRig GPU</title>
+        <meta property="og:type" content="https://angaros.me/xmrig-gpu">
+        <meta property="og:title" content="Angaros - XMRig GPU!" />
+        <meta property="og:description" content="Find the XMRig GPU guide to Salad CLI mining!" />
+        <meta property="og:url" content="https://angaros.me/xmrig-gpu" />
+        <meta property="og:image" content="images/WebpageIcon.jpg" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <script src="assets/js/main.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="images/WebpageIcon.ico" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKMYGRM19T"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZKMYGRM19T');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3813448291104059"
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <!-- Header -->
+      <div class="navbar">
+        <a href="https://angaros.me/index"><img src="images/WebpageIcon.ico" class="logo" alt="Angaros Logo"></a><div class="name">Angaros</div>
+        <nav>
+          <ul>
+            <li><a href="https://angaros.me/index">Home</a></li>
+            <li><a href="https://angaros.me/cli">CLI</a></li>
+            <li><a href="https://rich-presence-website.vercel.app/index.html">Discord RPC</a></li>
+            <li><a href="./assets/Salad.io_Unofficial.apk">Salad Mobile</a></li>
+            <li><a href="https://angaros.me/otherapps">Other apps</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr>
+        <button class="glow-on-hover" onclick="goBack()">&#8592; Go Back</button>
+        <div id="maintext">
+            <br>
+            <br>
+
+            <h1>Use Salad in your command line with XMRig GPU</h1>
+            <p>
+            Made by Angaros#1263 - Last update 19/06/2022 @10:45 UTC+1
+            </p>
+
+
+            <hr>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible2" class="toggle" type="checkbox"> 
+                <label for="collapsible2" class="lbl-toggle">Advantages</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Running CLI allows you to:</p>
+                        <ul>
+							<li>Customise GPU usage</li>
+                            <li>Mine on CPU and GPU at the same time</li>
+                            <li>Have access to additional miner arguments</li>
+                            <li><i>Potentially</i> earn a bit more by using more advanced miner arguments than what Salad uses</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible3" class="toggle" type="checkbox"> 
+                <label for="collapsible3" class="lbl-toggle">Extra Help</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>There's a video that will explain in detail the process of setting up XMRigGPU. Essentially it's a recap of the written guide, but I also go in detail about the config file.</p>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CPz6MUhV6Tk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>Join <a href="https://discord.gg/TujgMYdPdh">my Discord server</a> for extra help!</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible4" class="toggle" type="checkbox"> 
+                <label for="collapsible4" class="lbl-toggle">Warnings</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>The following content is not official, but has been approved. It is not being monitored by Salad. The use of the following is at your own risk, and we will not be held liable for any damage, loss of information, or any issue whatsoever.
+                            <br><br>
+                            We cannot and will not pay you back in any event.</p>
+                            <p><i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a children's' playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i></p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible5" class="toggle" type="checkbox"> 
+                <label for="collapsible5" class="lbl-toggle">Prerequisites</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <ul>
+                            <li>Internet Connection</li>
+                            <li>A GPU with 4GB+ of VRAM (although T-REX, Phoenix, NBminer or GMiner are recommended for 6GB+ GPUs)</li>
+                            <li>500MB disk space</li>
+                            <li>Have installed Salad (<a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> if you wish to use Nicehash's pool, rather than Prohashing.)</li>
+                            <li>To have mined once before (This is to generate your Rig and wallet ID, shown in Salad's logs in later steps)
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible6" class="toggle" type="checkbox"> 
+                <label for="collapsible6" class="lbl-toggle">Step 1: Install XMRig</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>This is going to be a multistep install, due to the requirements GPUs have. First, install the latest XMRig gcc-win64.zip version, found <a href="https://github.com/xmrig/xmrig/releases">here</a>.  This will install the base XMRig miner with the dependencies and required files.</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible7" class="toggle" type="checkbox"> 
+                <label for="collapsible7" class="lbl-toggle">Step 2: (ONLY follow if you're on NVIDIA) Blending XMRig and drivers</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>On NVIDIA you'll want to install the GPU modules. NVIDIA requires a special library to be installed, which is located <a href="https://github.com/xmrig/xmrig-cuda/releases/download/v6.17.0/xmrig-cuda-6.17.0-cuda11_3-win64.zip">here</a></p>
+                        <p>In order to mine on GPU with NVIDIA, you'll need to blend both of the installations you made. This is as simple as transferring the NVIDIA module files (the things you installed from the link just above) into the main XMRig download.</p>
+                        <p>You may get a warning about some files already existing. Please overwrite the previous one with the new.</p>
+                        <p>Here's what it should look like (yours *might* differ a bit)</p>
+                        <img class="CudaImage" src="images/XMRigCuda.png" alt="XMRIG CUDA explanation">
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible8" class="toggle" type="checkbox"> 
+                <label for="collapsible8" class="lbl-toggle">Step 3: Find your pool and worker ID</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Here is <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">a guide to finding your Salad logs.</a> You'll need these to find the required IDs.</p>
+                        <p>Note that Salad 1.0 no longer gives the required IDs to mine with Nicehash, so you'll have to use Salad <a href="https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6" target="_blank">0.5.6</a> to get the IDs required for these pools.</p>
+						<p>You may be able to still get your Prohashing IDs in Salad 1.0 by mining at least once with it, heading to your <a href="https://support.salad.com/article/233-salad-log-files" target="_blank">Salad logs folder</a>, opening the folder for one of the miners (e.g. T-Rex), opening the latest log inside said folder, then at the very top you should see something like "-u salad -p (A bunch of random characters)".</p>
+                        <p>It should look something like this:</p>
+                        <div class ="row">
+                            <div class="column"><img src="images/RigIDs.png" alt="Snow" style="width:100%"></div>
+                            <div class="column"><img src="images/MinerIDs.png" alt="Snow" style="width:100%"></div>
+                        </div>
+                        <p>You'll want to keep these for when we do the linking</p>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible9" class="toggle" type="checkbox"> 
+                <label for="collapsible9" class="lbl-toggle">Step 4: Making your Salad CLI</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>- Go in the XMRig folder you installed in Step 1. You'll find a file named <code>start.bat</code>. You'll want to open it with notepad, or a code editor.</p>
+                        <p>Should it not exist, you can also just create it.</p>
+                        <p>- We will need to edit the <code>start.bat</code> file, by adding the correct information:</p>
+                        <p>Nicehash:</p>
+						<div class="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --<i>&lt;gpu_type&gt;</i> --donate-level=1 -o <i>&lt;pool&gt;</i> -u <i>&lt;Wallet Address&gt;</i>.<i>&lt;Rig ID&gt;</i> -a <i>&lt;algorithm&gt;</i> -k --nicehash<br>
+                            pause
+                            </div><br>
+						<p>Prohashing:</p>
+						<div class="codeBlock">
+							@echo off<br>
+							xmrig.exe --no-cpu --<i>&lt;gpu_type&gt;</i> --donate-level=1 -o <i>&lt;pool&gt;</i> -u salad -p <i>&lt;That long string of text&gt;</i> -a <i>&lt;algorithm&gt;</i> -k<br>
+							pause
+                        </div>
+							
+                        <p>- First, the GPU type:</p>
+                        <ul>
+                            <li>If you're on NVIDIA, type <code>--cuda</code></li>
+                            <li>If you're on AMD, type <code>--opencl</code></li>
+                        </ul><br>
+                        <p>- Second, the pool and port: You'll want to use one of the following:</p>
+                        <ul>
+                            <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - Nicehash KawPow. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
+							<li><code>stratum+tcp://prohashing.com:3361</code> - Prohashing KawPow. Be sure to have <code>,a=kawpow</code> at the end of your 'long string of text'.</li>
+							<br>
+							<li><code>stratum+ssl://randomxmonero.auto.nicehash.com:443</code> - Nicehash RandomX. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://randomxmonero.auto.nicehash.com:9200</code></li>
+							<li><code>stratum+tcp://prohashing.com:3359</code> - Prohashing RandomX. Be sure to have <code>,a=randomx</code> at the end of your 'long string of text'.</li><br>
+                        </ul>
+						<p>- Third, the algorithm. If you wish to use KawPow, use <code>-a kawpow</code>. If you wish to use RandomX, use <code>-a randomx</code>
+						<br>Though currently KawPow is currently more profitable than RandomX, so you'd likely wish to choose that.</p>
+                        <p>- Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for 'Wallet Address' and 'Rig ID'.
+						<br>For Prohashing, you'll need to use your 'long string of text' Prohashing ID. If the algorithm indicator at the end of the ID (<code>,a=</code>) doesn't work, try removing it. It should work without it.</p>
+						
+                        <p>- Here's an example of a completed file for an NVIDIA GPU, using Nicehash KawPow:</p>
+                        <div class="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+ssl://kawpow.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a kawpow -k --nicehash<br>
+                            pause
+                        </div><br>
+						<p>- And here's an example of a completed file for an AMD GPU, using Prohashing RandomX:
+						<div class="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --opencl --donate-level=1 -o stratum+tcp://prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
+                            pause
+						</div>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible10" class="toggle" type="checkbox"> 
+                <label for="collapsible10" class="lbl-toggle">Some additional .bat commands</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Here's some pretty useful XMRig commands you can use:</p>
+                        <ul>
+                            <li><code>--print-time=n</code> : If you want to print (update) hashrate at a faster rate, 'n' being in seconds</li>
+                            <li><code>--background</code> : Will run XMRig in the background. Note: Will not appear in the System Tray, you'll have to close it via Task Manager</li>
+							<li><code>--pause-on-battery</code> : For those laptop users out there, this will pause mining when your laptop is running on battery life, and resume when it is plugged in.
+							<li><code>--log-file=n</code> : Where 'n' is the name of the log file.
+                        </ul>
+                        <p>There are more miner arguments to be found <a id="link" href="https://xmrig.com/docs/miner/command-line-options" target="_blank">here</a> for aditional customisation.</p>
+                        <p>- Here's an example of a completed file for an NVIDIA GPU, using Nicehash KawPow with extra commands:</p>
+                        <div class="codeBlock">
+                            @echo off<br>
+                            xmrig.exe --no-cpu --cuda --donate-level=1 -o stratum+ssl://kawpow.auto.nicehash.com:443 -u 373Ee6DSDgAYNAVSnfgUV99248L6Ab7aUH.p36pcuzwyhvd2fx -a kawpow -k --nicehash --print-time=5 --background<br>
+                            pause
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <input id="collapsible11" class="toggle" type="checkbox"> 
+                <label for="collapsible11" class="lbl-toggle">Using your Salad CLI</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Save the <code>start.bat</code> file, close it, and run it. It should work if everything was set up properly.</p>
+                        <p>Wait about 15 minutes (can be a bit more, a bit less) and verify that you are getting accepted shares, and then earning on Salad. If not, something went wrong. Verify you followed all steps and retry once the issue is fixed.</p>
+                        <p>And there you have it! This should be a quick guide to CLI crypto on your Salad account!</p>
+                        <p>Note: XP and Graph will both work, and this does respect Salad's ToS, so it is not a violation of your contract with Salad.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
