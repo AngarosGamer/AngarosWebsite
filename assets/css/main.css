@@ -7,15 +7,16 @@
   font-family: "lato", sans-serif;
 }
 html {
-  height: 100%
+  height: 100%;
+  background-color: #705b40;
 }
 body {
-  background-color: #c69c6c;
+  background-color: #705b40;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 .box {
-  background-color:#303136;
+  background-color:#271905;
   border-radius: 5px;
   margin-top: 10px;
   display: flex;
@@ -25,13 +26,13 @@ body {
   padding-bottom: 10px;
 }
 input {
-  background-color: #c69c6c;
+  background-color: #FCDEBC;
   border-radius: 10px;
   font-size: 20px;
   padding: 5px;
 }
 label {
-  color: #c69c6c;
+  color: #FCDEBC;
 }
 select {
   border-radius: 10px;
@@ -39,10 +40,10 @@ select {
   padding: 5px;
 }
 #hash {
-  background-color: #c69c6c;
+  background-color: #FCDEBC;
 }
 #algo {
-  background-color: #c69c6c;
+  background-color: #FCDEBC;
 }
 #flex-wrap {
   display: flex;
@@ -75,7 +76,7 @@ select {
   min-width: 200px;
   padding: 16px;
   text-align: center;
-  background-color: #303136;
+  background-color: #271905;
   transition: transform 0.5s;
   margin: 0;
 }
@@ -83,13 +84,13 @@ select {
   transform: translateY(-5px);
 }
 .cards-new p {
-  color: #c69c6c;
+  color: #FCDEBC;
 }
 /* Header Formatting - 3 different for each HTML page variant */
 .container {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(#303136, #c69c6c);
+  background-image: linear-gradient(#271905, #FCDEBC);
   background-position: center;
   background-size: cover;
   padding-left: 8%;
@@ -99,36 +100,86 @@ select {
 .container2 {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(#303136, #c69c6c);
+  background-color: #705b40;
+  /* background-image: linear-gradient(#271905, #FCDEBC); */
   background-position: center;
   background-size: cover;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 1%;
+  padding-right: 1%;
   box-sizing: border-box;
 }
 .container3 {
   width: 100%;
   height:100%;
-  background-image: linear-gradient(#303136, #c69c6c);
+  /* background-image: linear-gradient(#271905, #FCDEBC); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
   padding-left: 8%;
   padding-right: 8%;
   box-sizing: border-box;
+  background-color: #705b40;
 }
 /* End Header Formatting */
 
 /* Navbar Formatting */
 .navbar {
+  background-color: #271905;
   height: 12%;
   display: flex;
   align-items: center;
 }
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 nav {
   flex: 1;
   text-align: right;
 }
+
 nav ul li {
   list-style: none;
   display: inline-block;
@@ -187,7 +238,7 @@ button {
   border-radius: 10px;
 }
 .glow-on-hover:hover {
-  border: 1px solid #c69c6c;
+  border: 1px solid #FCDEBC;
 }
 
 /* Main Menu Separate cards - text */
@@ -212,10 +263,10 @@ h2 {
   text-align: center;
 }
 h4 {
-  color: #fff;
+  color: #f8f3f5;
 }
 h5 {
-  color: #fff;
+  color: #f8f3f5;
   text-shadow: 0 0 5px #999;
 }
 p {
@@ -244,7 +295,7 @@ ul li code {
   font-size: 1rem;
 }
 a {
-  color: #c69c6c;
+  color: #FCDEBC;
 }
 
 /* Home Menu cards */
@@ -310,7 +361,7 @@ a {
   min-width: 9.375em;
   padding: 16px;
   text-align: center;
-  background-color: #303136;
+  background-color: #271905;
   transition: transform 0.5s;
   margin: 0;
 }
@@ -318,7 +369,7 @@ a {
   transform: translateY(-5px);
 }
 .cards p {
-  color: #c69c6c;
+  color: #FCDEBC;
 }
 
 .suppgpus {
@@ -331,7 +382,7 @@ a {
 	margin-top: 2px;
 }
 .minersuppNVIDIA {
-	background-color: green;
+	background-color: #263514;
 	border-radius: 3px;
 	display: flex;
 	justify-content: center;
@@ -339,7 +390,7 @@ a {
 	width: 50px;
 }
 .minersuppAMD {
-	background-color: red;
+	background-color: #690005;
 	border-radius: 3px;
 	display: flex;
 	justify-content: center;
@@ -347,7 +398,7 @@ a {
 	width: 39px;
 }
 .minersuppIntel {
-	background-color: #0087ff;
+	background-color: #00417A;
 	border-radius: 3px;
 	display: flex;
 	justify-content: center;
@@ -380,19 +431,16 @@ a {
   border-radius: 5px;
   padding: 16px;
   text-align: center;
-  background-color: #303136;
+  background-color: #271905;
   transition: transform 0.5s;
   min-width: 200px;
 }
 .cards2:hover {
   transform: translateY(-5px);
 }
-.cards2 img {
-position: center;
-width: 20%;
-}
+.cards2 img {position: initial;width: 20%;}
 .cards2 p {
-  color: #c69c6c;
+  color: #FCDEBC;
 }
 
 /* Cards system version n°3 */
@@ -421,7 +469,7 @@ position: center;
 width: 20%;
 }
 .cards3 p {
-  color: #c69c6c;
+  color: #FCDEBC;
 }
 
 /* Cards system version n°4 */
@@ -450,7 +498,7 @@ position: center;
 width: 20%;
 }
 .cards4 p {
-  color: #c69c6c;
+  color: #FCDEBC;
 }
 
   /* Collapsibles for guides */
@@ -475,8 +523,8 @@ width: 20%;
         font-weight: bold;
         font-size: 1.2rem; 
         padding: 1rem; 
-        color: #c69c6c; 
-        background: #303136; 
+        color: #FCDEBC; 
+        background: #271905; 
         cursor: pointer; 
         border-radius: 7px; 
         transition: all 0.25s ease-out; 
@@ -510,7 +558,7 @@ width: 20%;
         border-bottom-left-radius: 0; 
     } 
     .collapsible-content .content-inner { 
-        background: #303136; 
+        background: #271905; 
         padding: .5rem 1rem; 
     } 
     .collapsible-content p { 
