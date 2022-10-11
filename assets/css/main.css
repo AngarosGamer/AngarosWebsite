@@ -91,7 +91,6 @@ select {
 .container {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(#271905, #FCDEBC);
   background-position: center;
   background-size: cover;
   padding-left: 8%;
@@ -101,8 +100,6 @@ select {
 .container2 {
   width: 100%;
   height: 100%;
-  /* background-color: #705b40; */
-  background-image: linear-gradient(#271905, #705b40);
   background-position: center;
   background-size: cover;
   padding-left: 1%;
@@ -141,11 +138,6 @@ select {
 .navbar a:hover {
   background-color: #ddd;
   color: black;
-}
-
-.navbar a.active {
-  background-color: #04AA6D;
-  color: white;
 }
 
 .navbar .icon {
