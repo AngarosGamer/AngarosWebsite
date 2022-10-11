@@ -12,7 +12,9 @@ TL;DR
 * Use common sense.
 
 ## Contributing to AngarosWebsite
-Don't use your own colour palette unless it for miscellaneous stuff (e.g Easter egg, decoration, etc) or you have exception from Angaros. *That's it!*
+Don't use Copyrighted materials, If use materials that have been licenesed like Common Creative, be sure to credit them!
+Don't use your own colour palette unless it for miscellaneous stuff (e.g Easter egg, decoration, etc) or you have exception from Angaros.
+*That's it!*
 
 ## Suggestions and additions not pertaining to a pull request
 Join our Discord server, [Angaros's Playground](https://discord.gg/MzweZCJWrZ), if you'd like to have a talk about CLI, what it is and how it works. We can also talk about things you'd like to add / change / remove for the guides, website.

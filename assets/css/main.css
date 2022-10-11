@@ -65,7 +65,7 @@ select {
   padding-left: 6em;
 }
 .column-new:last-child {
-   padding-left: 6em;
+   padding-left: 2.5em;
  }
 
 .cards-new {
@@ -79,6 +79,7 @@ select {
   background-color: #271905;
   transition: transform 0.5s;
   margin: 0;
+  border-bottom-style: inset;
 }
 .cards-new:hover {
   transform: translateY(-5px);
@@ -111,14 +112,12 @@ select {
 .container3 {
   width: 100%;
   height:100%;
-  background-image: linear-gradient(#271905, #705b40);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
   padding-left: 8%;
   padding-right: 8%;
   box-sizing: border-box;
-  background-color: #705b40;
 }
 /* End Header Formatting */
 
