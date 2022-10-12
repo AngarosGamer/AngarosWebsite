@@ -9,6 +9,8 @@
 html {
   height: 100%;
   background-image: linear-gradient(#271905, #705b40);
+  overflow-wrap: break-word;
+  background-attachment: fixed;
 }
 body {
   /* background-color: #705b40; */
@@ -47,7 +49,7 @@ select {
 }
 #flex-wrap {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .center {
   display: flex;
@@ -105,6 +107,7 @@ select {
   padding-left: 1%;
   padding-right: 1%;
   box-sizing: border-box;
+  background-image: aliceblue;
 }
 .container3 {
   width: 100%;
@@ -115,6 +118,7 @@ select {
   padding-left: 8%;
   padding-right: 8%;
   box-sizing: border-box;
+  /* background-image: linear-gradient(#271905, #705b40); */
 }
 /* End Header Formatting */
 
