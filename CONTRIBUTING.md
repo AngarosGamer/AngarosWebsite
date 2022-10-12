@@ -19,11 +19,16 @@ Don't use your own colour palette unless it for miscellaneous stuff (e.g Easter 
 ## Suggestions and additions not pertaining to a pull request
 Join our Discord server, [Angaros's Playground](https://discord.gg/MzweZCJWrZ), if you'd like to have a talk about CLI, what it is and how it works. We can also talk about things you'd like to add / change / remove for the guides, website.
 
+## Downloadable files
+Any downloadable files must be downloaded from **GitHub.com**, not from the hosted website. This ensure better security, in case if Angaros forget to renew the SSL Certificate in these site: `angaros.me`, `angaros.vercel.app`
+
+## DMCA Takedown
+If you want to takedown the materials that are presented in the website, please contact Angaros by joining the Discord server [Angaros's Playground](https://discord.gg/MzweZCJWrZ) and DM Angaros#1263 regarding about the DMCA takedown.
 
 ## Colour palette
 You have to only follow the colour that are presented here, **for decoration (e.g badge, etc), you don't need to follow this, just make sure that it WCAG 2.1 AA compatible or higher, and consistent with all pages.**
 
-Background: #705b40 -
+Background: `linear-gradient(#271905, #705b40);` -
 On background: #f2f2f2
 
 Primary: #271905 -
@@ -42,5 +47,8 @@ Quaternary: #00417A (Blue) -
 On quaternary: #f2f2f2
 
 Text: #f2f2f2
+
+See example:
+![https://user-images.githubusercontent.com/93124920/194860288-e2b6681a-c4ce-42ce-8e49-daf7d6dc91fb.png]
 
 ## Thanks for contributing!
