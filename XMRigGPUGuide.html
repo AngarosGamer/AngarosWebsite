@@ -49,7 +49,7 @@
 
             <h1>Use Salad in your command line with XMRig GPU</h1>
             <p>
-            Made by Angaros#1263 - Last update 19/06/2022 @10:45 UTC+1
+            Made by Angaros#1263 - Last update 05/11/2022 @12:11 GMT (DD/MM/YYYY)
             </p>
 
 
@@ -168,10 +168,10 @@
                         <p>- Second, the pool and port: You'll want to use one of the following:</p>
                         <ul>
                             <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - Nicehash KawPow. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
-							<li><code>stratum+tcp://prohashing.com:3361</code> - Prohashing KawPow. Be sure to have <code>,a=kawpow</code> at the end of your 'long string of text'.</li>
+							<li><code>stratum+tcp://us.mining.prohashing.com:3361</code> - Prohashing KawPow. Be sure to have <code>,a=kawpow</code> at the end of your 'long string of text'. You can optionally change locations to the one closest to you: us, eu.</li>
 							<br>
 							<li><code>stratum+ssl://randomxmonero.auto.nicehash.com:443</code> - Nicehash RandomX. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://randomxmonero.auto.nicehash.com:9200</code></li>
-							<li><code>stratum+tcp://prohashing.com:3359</code> - Prohashing RandomX. Be sure to have <code>,a=randomx</code> at the end of your 'long string of text'.</li><br>
+							<li><code>stratum+tcp://us.mining.prohashing.com:3359</code> - Prohashing RandomX. Be sure to have <code>,a=randomx</code> at the end of your 'long string of text'. You can optionally change locations to the one closest to you: us, eu.</li><br>
                         </ul>
 						<p>- Third, the algorithm. If you wish to use KawPow, use <code>-a kawpow</code>. If you wish to use RandomX, use <code>-a randomx</code>
 						<br>Though currently KawPow is currently more profitable than RandomX, so you'd likely wish to choose that.</p>
@@ -187,7 +187,7 @@
 						<p>- And here's an example of a completed file for an AMD GPU, using Prohashing RandomX:
 						<div class="codeBlock">
                             @echo off<br>
-                            xmrig.exe --no-cpu --opencl --donate-level=1 -o stratum+tcp://prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
+                            xmrig.exe --no-cpu --opencl --donate-level=1 -o stratum+tcp://us.mining.prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
                             pause
 						</div>
                     </div>

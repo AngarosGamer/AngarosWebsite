@@ -49,7 +49,7 @@
 
             <h1>Use Salad in your command line with XMRig CPU</h1>
             <p>
-            Made by Angaros#1263 - Last update 19/06/2022 @15:19 UTC+1
+            Made by Angaros#1263 - Last update 05/11/2022 @12:11 GMT (DD/MM/YYYY)
             </p>
 
             <hr>
@@ -152,7 +152,7 @@
                         <p>- First, the pool and port: You'll want to use one of these two:</p>
                         <ul>
 							<li><code>stratum+ssl://randomxmonero.auto.nicehash.com:443</code> - Nicehash RandomX. If you're having issues with the SSL pool, you can alternatively use <code>stratum+tcp://randomxmonero.auto.nicehash.com:9200</code></li>
-							<li><code>stratum+tcp://prohashing.com:3359</code> - Prohashing RandomX. Be sure to have <code>,a=randomx</code> at the end of your 'long string of text'.</li><br>
+							<li><code>stratum+tcp://us.mining.prohashing.com:3359</code> - Prohashing RandomX. Be sure to have <code>,a=randomx</code> at the end of your 'long string of text'. You can optionally change locations to the one closest to you: us, eu.</li><br>
                         </ul>
                         <p>- And lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for 'Wallet Address' and 'Rig ID'.
 						<br>For Prohashing, you'll need to use your 'long string of text' Prohashing ID. If the algorithm indicator at the end of the ID (<code>,a=</code>) doesn't work, try removing it. It should work without it.</p>
@@ -166,7 +166,7 @@
 						<p>- And here's an example of a completed file, using Prohashing's pool:</p>
 						<div class="codeBlock">
                             @echo off<br>
-                            xmrig.exe --donate-level=1 -o stratum+tcp://prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
+                            xmrig.exe --donate-level=1 -o stratum+tcp:///us.mining.prohashing.com:3359 -u salad -p o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787,a=randomx -a randomx -k<br>
                             pause
 						</div>
                     </div>

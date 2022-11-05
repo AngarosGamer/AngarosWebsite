@@ -47,7 +47,7 @@
             <br><br>
             <h1>NBMiner guide</h1>
             <p>
-                Made by Angaros#1263 - Last update 15/09/2022 @18:01 UTC+1
+                Made by Angaros#1263 - Last update 05/11/2022 @12:11 GMT (DD/MM/YYYY)
             </p>
 
             <hr>
@@ -155,7 +155,7 @@
                             <li><code>stratum+ssl://kawpow.auto.nicehash.com:443</code> - For Nicehash Kawpow. If you have issues with SSL, you can alternatively use <code>stratum+tcp://kawpow.auto.nicehash.com:9200</code></li>
                             <li><code>stratum+ssl://beamv3.auto.nicehash.com:443</code> - For Nicehash beamv3. If you have issues with SSL, you can alternatively use <code>stratum+tcp://beamv3.auto.nicehash.com:9200</code></li>
                             <li><code>eu1-etc.ethermine.org:4444</code> For Ethermine ETC (Ethereum Classic). You can optionally change locations to the one closest to you: eu1, us1, asia1.</li>
-							<li><code>stratum+tcp://prohashing.com:3361</code> For Prohashing KawPow (Ravencoin).</li>
+							<li><code>stratum+tcp://us.mining.prohashing.com:3361</code> For Prohashing KawPow (Ravencoin). You can optionally change locations to the one closest to you: us, eu.</li>
                         </ul>
 						<br>
                         <p>Lastly, the Wallet & Rig IDs: This is pretty straightforward. Add them to the file like shown in the example. You'll need to use the <b>Nicehash</b> values for the Nicehash format, the <b>Ethermine</b> values for the Ethermine format, and the <b>Prohashing</b> values for the Prohashing format.</p>
@@ -168,7 +168,7 @@
                         </div>
 						<br><p>And here's an example of a completed KawPow (Ravencoin) file for Prohashing:</p>
                         <div class="codeBlock">
-                            nbminer --algo kawpow --url stratum+tcp://prohashing.com:3361 --user salad --password o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787<br>
+                            nbminer --algo kawpow --url stratum+tcp://us.mining.prohashing.com:3361 --user salad --password o=b256ea13-797f-474f-b6c9-c8edd47d9787,n=b256ea13-797f-474f-b6c9-c8edd47d9787<br>
                             pause
                         </div>
                     </div>
